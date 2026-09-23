@@ -94,7 +94,28 @@ function renderArchive(data, currentState) {
 const EMBEDDED_META = {"obra":"MARYLIN.DATA","version_sistema":"3.4","estado":"MD_0022","numero_estado":22,"fecha":"2026-09-22","hora":"18:38:55","seed":848509,"estado_sistema":"CONTRADICCIÓN ACTIVA","estados_registrados":22,"fuerzas_visuales":{"tiempo":14,"peso":90.75,"expansion":61.6667,"libertad":46,"tension":70.3333,"movimiento":46.25,"contradiccion":53.95,"identidad":67.3333},"memoria":{"contradiccion_heredada":53.2525,"contradiccion_acumulada":53.0204,"estados_con_memoria":21},"huella":{"cambio_absoluto_acumulado":1218,"movimientos_registrados":223,"intensidad_huella":0.054619,"pico_huella":0.2,"persistencia":1},"principio":"La identidad no se promedia: se acumula. Cada experiencia agrega un movimiento y los estados anteriores pueden deformar los posteriores."};
 const EMBEDDED_ARCHIVE = {obra:"MARYLIN.DATA", estados:[]};
 
-async function safeLoad(path, fallback) { try { return await loadJSON(path); } catch(e) { return fallback; } }
+async function safeLoad(path, fallback) {
+  try {
+    const data = await loadJSON(path);
+    console.info(`[MARYLIN.DATA] Cargado: ${path}`);
+    return data;
+  } catch(e) {
+    console.warn(`[MARYLIN.DATA] No se pudo cargar ${path}`, e);
+    return fallback;
+  }
+}
+
+function normalizeHistoryData(data) {
+  if (!data) return [];
+  const items = getArchiveItems(data);
+  return items.filter(item => item && item.estado).map(item => ({
+    ...item,
+    fuerzas_visuales: item.fuerzas_visuales || item.fuerzas || {},
+    memoria: item.memoria || {},
+    huella: item.huella || {},
+    lectura: item.lectura || null
+  }));
+}
 
 let HISTORY = [];
 let CURRENT_META = EMBEDDED_META;
@@ -186,6 +207,8 @@ function selectHistoryState(index) {
   setText("#metricMemoryStates", item.memoria?.estados_con_memoria ?? Math.max(0, stateNumber(item.estado)-1));
   setText("#metricMoves", item.huella?.movimientos_registrados ?? "—");
   setText("#metricMoves2", item.huella?.movimientos_registrados ?? "—");
+  setText("#metricChange", item.huella?.cambio_absoluto_acumulado ?? "—");
+  setText("#metricPeak", item.huella?.pico_huella !== undefined ? Number(item.huella.pico_huella).toFixed(2) : "—");
   setText("#metricPersistence", item.huella?.persistencia !== undefined ? Number(item.huella.persistencia).toFixed(2) : "—");
   setText("#metricPersistence2", item.huella?.persistencia !== undefined ? Number(item.huella.persistencia).toFixed(2) : "—");
   setText("#metricIntensity", item.huella?.intensidad_huella !== undefined ? Number(item.huella.intensidad_huella).toFixed(3) : "—");
@@ -219,7 +242,8 @@ async function init() {
     const archive = await safeLoad("archivo_estados.json", EMBEDDED_ARCHIVE);
     const history = await safeLoad("historial_estados.json", null);
     CURRENT_META = meta;
-    HISTORY = getHistoryItems(history, archive, meta);
+    const normalizedHistory = normalizeHistoryData(history);
+    HISTORY = normalizedHistory.length ? normalizedHistory : getHistoryItems(null, archive, meta);
     if (!HISTORY.length) HISTORY = [meta];
 
     const currentIndex = Math.max(0, HISTORY.findIndex(x => x.estado === meta.estado));
@@ -244,3 +268,4 @@ function initMotion() {
 
 initMotion();
 init();
+

@@ -1,6 +1,6 @@
 {
     "obra": "MARYLIN.DATA",
-    "actualizado": "2026-09-22 18:38:55",
+    "actualizado": "2026-09-22",
     "estados": [
         {
             "estado": "MD_0001",
@@ -61,7 +61,7 @@
         {
             "estado": "MD_0009",
             "fecha": "2026-09-09",
-            "hora": "21:00:19",
+            "hora": "21:00:20",
             "resultado": "CONTRADICCIÓN ACTIVA",
             "fragmento": "MD_0009.png"
         },
@@ -152,7 +152,7 @@
         {
             "estado": "MD_0022",
             "fecha": "2026-09-22",
-            "hora": "18:38:28",
+            "hora": "18:38:55",
             "resultado": "CONTRADICCIÓN ACTIVA",
             "fragmento": "MD_0022.png"
         }
