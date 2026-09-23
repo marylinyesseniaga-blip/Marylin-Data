@@ -26,3 +26,5 @@ Puede publicarse como sitio estático en GitHub Pages. El archivo de entrada es 
 
 NOTA
 El archivo histórico registra los estados MD_0001–MD_0022, pero la interfaz pública solo enlaza visualmente el estado actual MD_0022 mientras se decide cómo publicar los fragmentos históricos.
+
+Versión 1.1: corrección de renderizado de fuerzas visuales en el estado actual.

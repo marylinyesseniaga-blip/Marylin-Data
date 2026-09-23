@@ -35,11 +35,12 @@ function renderForces(meta) {
   const order = ["peso","tension","expansion","libertad","movimiento","contradiccion","identidad","tiempo"];
   const el = $("#forces");
   if (!el) return;
-  el.innerHTML = order.filter(k => forces[k] !== undefined).map(k => {
+  const rows = order.filter(k => Number.isFinite(Number(forces[k]))).map(k => {
     const v = Number(forces[k]);
     const width = pct(v);
     return `<div class="force"><div class="force-head"><span>${label(k)}</span><strong>${v.toFixed(2)}</strong></div><div class="bar"><i style="width:${width}%"></i></div></div>`;
-  }).join("");
+  });
+  if (rows.length) el.innerHTML = rows.join("");
 }
 
 function getArchiveItems(data) {
