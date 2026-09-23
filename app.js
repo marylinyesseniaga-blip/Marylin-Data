@@ -207,8 +207,6 @@ function selectHistoryState(index) {
   setText("#metricMemoryStates", item.memoria?.estados_con_memoria ?? Math.max(0, stateNumber(item.estado)-1));
   setText("#metricMoves", item.huella?.movimientos_registrados ?? "—");
   setText("#metricMoves2", item.huella?.movimientos_registrados ?? "—");
-  setText("#metricChange", item.huella?.cambio_absoluto_acumulado ?? "—");
-  setText("#metricPeak", item.huella?.pico_huella !== undefined ? Number(item.huella.pico_huella).toFixed(2) : "—");
   setText("#metricPersistence", item.huella?.persistencia !== undefined ? Number(item.huella.persistencia).toFixed(2) : "—");
   setText("#metricPersistence2", item.huella?.persistencia !== undefined ? Number(item.huella.persistencia).toFixed(2) : "—");
   setText("#metricIntensity", item.huella?.intensidad_huella !== undefined ? Number(item.huella.intensidad_huella).toFixed(3) : "—");
@@ -268,4 +266,3 @@ function initMotion() {
 
 initMotion();
 init();
-

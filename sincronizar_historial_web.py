@@ -50,14 +50,28 @@ for p in sorted(LOGS.glob("MD_*.txt")):
         },
         "huella": mod.calcular_huella(n),
         "fragmento": f"MD_{n:04d}.png",
-        "lectura": mod._lectura_historica_publica(f"MD_{n:04d}", info.get("fuerzas",{})),
+        "lectura": mod._lectura_historica_publica(
+            f"MD_{n:04d}",
+            info.get("fuerzas", {}),
+        ),
     }
+    geometria = mod._calcular_lectura_geometrica(n)
+    if geometria:
+        item["lectura"]["geometria"] = geometria
+
     old = WEB / f"MD_{n:04d}_lectura.json"
     if old.exists():
         try:
             old_data = json.loads(old.read_text(encoding="utf-8"))
-            if old_data.get("lectura"): item["lectura"] = old_data["lectura"]
-        except Exception: pass
+            if old_data.get("lectura"):
+                lectura_existente = old_data["lectura"]
+                lectura_existente["geometria"] = item["lectura"].get(
+                    "geometria",
+                    lectura_existente.get("geometria", {}),
+                )
+                item["lectura"] = lectura_existente
+        except Exception:
+            pass
     historial.append(item)
 
 # Conserva la lectura completa del estado actual ya publicada.
