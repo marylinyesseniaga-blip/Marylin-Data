@@ -7,14 +7,81 @@
 .questions-section{padding:100px 0 140px}.questions-list{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);margin-top:35px}.questions-list div{display:grid;grid-template-columns:50px 1fr;gap:20px;padding:27px 15px;border-bottom:1px solid var(--line)}.questions-list div:nth-child(odd){border-right:1px solid var(--line)}.questions-list span{font:9px 'DM Mono',monospace;color:var(--gold)}.questions-list p{font:italic 22px 'Libre Baskerville',serif;margin:0}.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.is-visible{opacity:1;transform:none}@keyframes pulse{0%,100%{opacity:.45;transform:scale(.9)}50%{opacity:1;transform:scale(1.1)}}footer{border-top:1px solid var(--line);padding:18px 26px;display:flex;justify-content:space-between;font-size:9px;color:#716d65;gap:20px}
 @media(max-width:1000px){.hero,.guide-intro,.memory-head,.questions-head,.read-head{grid-template-columns:1fr;gap:30px}.hero{padding-top:55px}.hero-system{min-height:420px}.anatomy-grid{grid-template-columns:repeat(2,1fr)}.state-grid,.memory-layout{grid-template-columns:1fr}.archive{grid-template-columns:repeat(6,1fr)}.archive-item:nth-child(11n){border-right:1px solid var(--line)}.archive-item:nth-child(6n){border-right:0}.execution-band{grid-template-columns:1fr}.state-kpi-strip{grid-template-columns:repeat(3,1fr)}.kpi{border-bottom:1px solid var(--line)}.flow-row{grid-template-columns:1fr auto 1fr auto 1fr}.flow-row b:nth-of-type(n+4),.flow-row i:nth-of-type(n+3){display:none}}
 @media(max-width:650px){body{font-size:15px}.topbar{padding:0 15px}.topbar nav{display:none}.section,.hero{width:min(100% - 30px,1440px)}.hero h1{font-size:58px}.hero-system{min-height:360px}.hero-system-data{grid-template-columns:repeat(2,1fr);gap:15px}.hero-system-data div{border:0}.guide-section,.state-section,.memory-section,.questions-section{padding:65px 0}.guide-grid,.anatomy-grid,.questions-list{grid-template-columns:1fr}.anatomy-card{min-height:240px}.execution-band{padding:28px 20px}.execution-copy h3{font-size:34px}.state-head{align-items:start;gap:25px;flex-direction:column}.state-head-meta{text-align:left}.state-kpi-strip{grid-template-columns:repeat(2,1fr)}.state-grid{grid-template-columns:1fr}.forces,.geometry{grid-template-columns:1fr 1fr}.metrics{grid-template-columns:repeat(2,1fr)}.metrics div:nth-child(odd){border-right:1px solid var(--line)}.archive{grid-template-columns:repeat(3,1fr)}.archive-item:nth-child(3n){border-right:0}.questions-list div:nth-child(odd){border-right:0}.questions-list p{font-size:18px}footer{flex-direction:column}}
-
-/* v13 — ocupa el vacío del panel temporal sin deformar la imagen */
 @media (max-width: 900px){.memory-layout{grid-template-columns:1fr}.memory-side{grid-template-rows:auto auto}.temporal-readout{grid-template-columns:repeat(3,1fr)}.temporal-readout>div{display:block}.temporal-readout strong{display:block;margin-top:7px}}
-
-/* v14 — composición inicial y rutas de imágenes corregidas */
 .hero{min-height:auto;align-items:start;padding:96px 0 105px;}
 .hero-system{min-height:470px;}
 @media(max-width:1000px){.hero{padding-top:70px;padding-bottom:80px;}}
 @media(max-width:650px){.hero{padding-top:55px;padding-bottom:65px;}}
-/* Evita cajas altas sin contenido y mantiene la proporción original de los mapas. */
 .memory-main .image-frame img,.temporal-card .image-frame img{height:auto;object-fit:contain;}
+/* v15 — entrada poética + explicación clara */
+.hero-question{
+  font: italic clamp(25px,2.7vw,39px)/1.15 'Libre Baskerville',serif;
+  color:#2d2b27;
+  max-width:760px;
+  margin:0 0 25px;
+}
+.hero-intro{
+  font-size:18px;
+  max-width:720px;
+  color:#45433e;
+  margin:0;
+}
+.hero-key{
+  margin-top:28px;
+  border-left:3px solid var(--gold);
+  padding:15px 20px;
+  background:#e9e5dc;
+  max-width:720px;
+}
+.hero-key strong{
+  display:block;
+  font:italic 18px/1.35 'Libre Baskerville',serif;
+  font-weight:400;
+}
+.hero-key span{
+  display:block;
+  margin-top:9px;
+  font:10px/1.5 'DM Mono',monospace;
+  color:#68665f;
+}
+.philosophical-note{
+  border-left:3px solid var(--gold);
+  padding:17px 22px;
+  background:#e9e5dc;
+  font:italic 18px/1.45 'Libre Baskerville',serif;
+  color:#34322e;
+  max-width:650px;
+}
+.clarity-note{
+  margin-top:25px;
+  padding:18px 20px;
+  background:#ebe7de;
+  border:1px solid var(--line);
+}
+.clarity-note span,.system-note span{
+  display:block;
+  font:9px 'DM Mono',monospace;
+  color:#827b6e;
+  letter-spacing:.1em;
+  margin-bottom:8px;
+}
+.clarity-note strong{
+  display:block;
+  font-size:17px;
+  line-height:1.35;
+}
+.system-note{
+  margin-top:25px;
+  padding-top:17px;
+  border-top:1px solid var(--line);
+}
+.system-note strong{
+  display:block;
+  font:italic 17px/1.35 'Libre Baskerville',serif;
+}
+@media(max-width:650px){
+  .hero-question{font-size:25px}
+  .hero-intro{font-size:16px}
+  .hero-key strong{font-size:16px}
+  .philosophical-note{font-size:16px}
+}
