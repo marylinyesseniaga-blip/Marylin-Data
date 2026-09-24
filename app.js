@@ -48,17 +48,12 @@ async function renderReading(item){
 
   let lectura = item.lectura || {};
 
-  // Si el estado no trae la lectura completa, cargar el archivo del estado.
-  if((!lectura.texto || !lectura.pregunta) && item.estado){
-    try{
-      const r = await fetch(`${item.estado}_lectura.json?v=${Date.now()}`);
-      if(r.ok){
-        lectura = await r.json();
-      }
-    }catch(e){
-      console.log("Sin lectura externa:", item.estado);
-    }
-  }
+  setText("#readingTitle", lectura.titulo || `LECTURA DEL ESTADO · ${item.estado}`);
+
+  setText("#readingText",
+    lectura.texto ||
+    lectura.resumen ||
+    "Sin lectura disponible.");
 
   setText("#readingTitle", lectura.titulo || `LECTURA DEL ESTADO · ${item.estado}`);
 
