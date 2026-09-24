@@ -46,7 +46,7 @@ function renderForces(meta) {
 
 async function renderReading(item){
 
-  let lectura = item.lectura || {};
+  const lectura = item.lectura || {};
 
   setText("#readingTitle", lectura.titulo || `LECTURA DEL ESTADO · ${item.estado}`);
 
@@ -55,27 +55,20 @@ async function renderReading(item){
     lectura.resumen ||
     "Sin lectura disponible.");
 
-  setText("#readingTitle", lectura.titulo || `LECTURA DEL ESTADO · ${item.estado}`);
-
-  setText("#readingText",
-    lectura.texto ||
-    lectura.resumen ||
-    "Sin lectura disponible.");
-
-  const q=document.querySelector("#readingQuestion");
+  const q = document.querySelector("#readingQuestion");
   if(q){
-    q.textContent=
+    q.textContent =
       lectura.pregunta ||
       "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?";
   }
 
-  const obs=$("#readingObservations");
+  const obs = $("#readingObservations");
   if(obs){
-    obs.innerHTML="";
-    (lectura.observaciones||[]).forEach(t=>{
-      const li=document.createElement("li");
-      li.textContent=t;
-      obs.appendChild(li);
+    obs.innerHTML = "";
+    (lectura.observaciones || []).forEach(t => {
+      const div = document.createElement("div");
+      div.textContent = t;
+      obs.appendChild(div);
     });
   }
 
@@ -96,11 +89,11 @@ async function renderReading(item){
     lectura.geometria?.asimetria_vertical ??
     "—");
 
-  const cx=lectura.geometria?.centro_x;
-  const cy=lectura.geometria?.centro_y;
+  const cx = lectura.geometria?.centro_x;
+  const cy = lectura.geometria?.centro_y;
 
-  setText("#readingCenter",
-    (cx!==undefined && cy!==undefined)
+  setText("#geoCenter",
+    (cx !== undefined && cy !== undefined)
       ? `${Number(cx).toFixed(2)} / ${Number(cy).toFixed(2)}`
       : "—");
 }
