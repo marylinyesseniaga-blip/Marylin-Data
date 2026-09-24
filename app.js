@@ -50,7 +50,7 @@ async function renderReading(item){
 
   setText("#readingTitle", lectura.titulo || `LECTURA DEL ESTADO · ${item.estado}`);
 
-  setText("#readingText",
+  setText("#readingSummary",
     lectura.texto ||
     lectura.resumen ||
     "Sin lectura disponible.");
@@ -81,17 +81,17 @@ async function renderReading(item){
 
   setText("#readingMethod", lectura.metodo || "—");
 
-  setText("#readingDensity",
+  setText("#geoDensity",
     lectura.geometria?.densidad?.toFixed?.(3) ??
     lectura.geometria?.densidad ??
     "—");
 
-  setText("#readingDispersion",
+  setText("#geoDispersion",
     lectura.geometria?.dispersion?.toFixed?.(3) ??
     lectura.geometria?.dispersion ??
     "—");
 
-  setText("#readingAxis",
+  setText("#geoAsymmetry",
     lectura.geometria?.asimetria_vertical?.toFixed?.(3) ??
     lectura.geometria?.asimetria_vertical ??
     "—");
