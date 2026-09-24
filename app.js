@@ -44,30 +44,71 @@ function renderForces(meta) {
   el.innerHTML = rows.join("");
 }
 
-function renderReading(meta) {
-  const reading = meta?.lectura;
-  const set = (id, value) => { const el = $(id); if (el) el.textContent = value ?? "—"; };
-  if (!reading) {
-    set("#readingTitle", `LECTURA DEL ESTADO · ${meta?.estado || ""}`);
-    set("#readingSummary", "Lectura histórica no disponible para este estado.");
-    const obs = $("#readingObservations");
-    if (obs) obs.innerHTML = "";
-    set("#readingQuestion", "¿Qué permanece cuando un estado se convierte en memoria?");
-    return;
-  }
-  set("#readingTitle", `${reading.titulo || "LECTURA DEL ESTADO"} · ${meta.estado || ""}`);
-  set("#readingMethod", reading.metodo || "");
-  set("#readingSummary", reading.resumen || "");
-  const geometry = reading.geometria || {};
-  set("#geoDensity", geometry.densidad !== undefined ? Number(geometry.densidad).toFixed(3) : "—");
-  set("#geoDispersion", geometry.dispersion !== undefined ? Number(geometry.dispersion).toFixed(3) : "—");
-  set("#geoAsymmetry", geometry.asimetria_vertical !== undefined ? Number(geometry.asimetria_vertical).toFixed(3) : (geometry.asimetria !== undefined ? Number(geometry.asimetria).toFixed(3) : "—"));
-  set("#geoCenter", geometry.centro_x !== undefined && geometry.centro_y !== undefined ? `${Number(geometry.centro_x).toFixed(2)} / ${Number(geometry.centro_y).toFixed(2)}` : "—");
-  const obs = $("#readingObservations");
-  if (obs) obs.innerHTML = (reading.observaciones || []).map((item, i) => `<div class="reading-observation"><span>${String(i+1).padStart(2,"0")}</span><p>${item}</p></div>`).join("");
-  set("#readingQuestion", reading.pregunta || "");
-}
+async function renderReading(item){
 
+  let lectura = item.lectura || {};
+
+  // Si el estado no trae la lectura completa, cargar el archivo del estado.
+  if((!lectura.texto || !lectura.pregunta) && item.estado){
+    try{
+      const r = await fetch(`${item.estado}_lectura.json?v=${Date.now()}`);
+      if(r.ok){
+        lectura = await r.json();
+      }
+    }catch(e){
+      console.log("Sin lectura externa:", item.estado);
+    }
+  }
+
+  setText("#readingTitle", lectura.titulo || `LECTURA DEL ESTADO · ${item.estado}`);
+
+  setText("#readingText",
+    lectura.texto ||
+    lectura.resumen ||
+    "Sin lectura disponible.");
+
+  const q=document.querySelector("#readingQuestion");
+  if(q){
+    q.textContent=
+      lectura.pregunta ||
+      "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?";
+  }
+
+  const obs=$("#readingObservations");
+  if(obs){
+    obs.innerHTML="";
+    (lectura.observaciones||[]).forEach(t=>{
+      const li=document.createElement("li");
+      li.textContent=t;
+      obs.appendChild(li);
+    });
+  }
+
+  setText("#readingMethod", lectura.metodo || "—");
+
+  setText("#readingDensity",
+    lectura.geometria?.densidad?.toFixed?.(3) ??
+    lectura.geometria?.densidad ??
+    "—");
+
+  setText("#readingDispersion",
+    lectura.geometria?.dispersion?.toFixed?.(3) ??
+    lectura.geometria?.dispersion ??
+    "—");
+
+  setText("#readingAxis",
+    lectura.geometria?.asimetria_vertical?.toFixed?.(3) ??
+    lectura.geometria?.asimetria_vertical ??
+    "—");
+
+  const cx=lectura.geometria?.centro_x;
+  const cy=lectura.geometria?.centro_y;
+
+  setText("#readingCenter",
+    (cx!==undefined && cy!==undefined)
+      ? `${Number(cx).toFixed(2)} / ${Number(cy).toFixed(2)}`
+      : "—");
+}
 function renderTrajectory(data, currentState) {
   const items = getArchiveItems(data).slice().sort((a,b) => stateNumber(a.estado) - stateNumber(b.estado));
   const el = $("#trajectory");
@@ -205,13 +246,13 @@ function selectHistoryState(index) {
   setText("#footerUpdated", fmtDate(item.fecha, item.hora));
   setText("#metricStates", item.estados_registrados ?? HISTORY.length);
   setText("#metricMemoryStates", item.memoria?.estados_con_memoria ?? Math.max(0, stateNumber(item.estado)-1));
-  setText("#metricChange", item.huella?.cambio_absoluto_acumulado !== undefined ? Number(item.huella.cambio_absoluto_acumulado).toFixed(0) : "—");
   setText("#metricMoves", item.huella?.movimientos_registrados ?? "—");
   setText("#metricMoves2", item.huella?.movimientos_registrados ?? "—");
+  setText("#metricChange", item.huella?.cambio_absoluto_acumulado ?? "—");
+  setText("#metricPeak", item.huella?.pico_huella !== undefined ? Number(item.huella.pico_huella).toFixed(2) : "—");
   setText("#metricPersistence", item.huella?.persistencia !== undefined ? Number(item.huella.persistencia).toFixed(2) : "—");
   setText("#metricPersistence2", item.huella?.persistencia !== undefined ? Number(item.huella.persistencia).toFixed(2) : "—");
   setText("#metricIntensity", item.huella?.intensidad_huella !== undefined ? Number(item.huella.intensidad_huella).toFixed(3) : "—");
-  setText("#metricPeak", item.huella?.pico_huella !== undefined ? Number(item.huella.pico_huella).toFixed(2) : "—");
 
   const img = $("#currentImage");
   if (img) {
@@ -268,3 +309,4 @@ function initMotion() {
 
 initMotion();
 init();
+
