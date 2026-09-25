@@ -1,33 +1,33 @@
 {
     "obra": "MARYLIN.DATA",
     "version_sistema": "3.4",
-    "estado": "MD_0023",
-    "numero_estado": 23,
+    "estado": "MD_0024",
+    "numero_estado": 24,
     "fecha": "2026-09-24",
-    "hora": "07:55:38",
-    "seed": 893805,
+    "hora": "19:52:15",
+    "seed": 469986,
     "estado_sistema": "CONTRADICCIÓN ACTIVA",
-    "estados_registrados": 23,
+    "estados_registrados": 24,
     "fuerzas_visuales": {
         "tiempo": 14.0,
-        "peso": 92.5,
+        "peso": 86.75,
         "expansion": 62.3333,
-        "libertad": 45.0,
+        "libertad": 48.0,
         "tension": 68.6667,
         "movimiento": 46.5,
         "contradiccion": 53.025,
-        "contradiccion_heredada": 53.3103,
+        "contradiccion_heredada": 53.2869,
         "identidad": 67.3333
     },
     "memoria": {
-        "contradiccion_heredada": 53.3103,
-        "contradiccion_acumulada": 53.0763,
-        "estados_con_memoria": 22
+        "contradiccion_heredada": 53.2869,
+        "contradiccion_acumulada": 53.0682,
+        "estados_con_memoria": 23
     },
     "huella": {
-        "cambio_absoluto_acumulado": 1252.0,
-        "movimientos_registrados": 232,
-        "intensidad_huella": 0.053966,
+        "cambio_absoluto_acumulado": 1294.0,
+        "movimientos_registrados": 238,
+        "intensidad_huella": 0.05437,
         "pico_huella": 0.2,
         "persistencia": 1.0
     },
@@ -36,26 +36,5 @@
         "identidad_acumulada": "identidad_acumulada_actual.png",
         "mapa_temporal": "mapa_temporal_actual.png"
     },
-    "principio": "La identidad no se promedia: se acumula. Cada experiencia agrega un movimiento y los estados anteriores pueden deformar los posteriores.",
-    "lectura": {
-        "titulo": "LECTURA DEL ESTADO",
-        "resumen": "El estado presenta una compresión alta, una asimetría marcada, una apertura contenida y una deriva moderada del eje visual.",
-        "observaciones": [
-            "El peso opera con una intensidad de 92.50 y condiciona la estructura.",
-            "La tensión alcanza 68.67; la asimetría se conserva marcada.",
-            "La expansión y la libertad producen una apertura contenida del campo.",
-            "El movimiento registra una deriva moderada del eje.",
-            "La contradicción alcanza 53.02 y permanece activa dentro del estado.",
-            "La identidad se sitúa en 67.33 dentro de la escala visual del sistema."
-        ],
-        "pregunta": "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?",
-        "metodo": "Lectura formal derivada de las fuerzas y de la geometría documentada del estado; no es una interpretación psicológica.",
-        "geometria": {
-            "densidad": 69.562,
-            "dispersion": 100.0,
-            "asimetria_vertical": 100.0,
-            "centro_x": 6.855,
-            "centro_y": 4.16
-        }
-    }
+    "principio": "La identidad no se promedia: se acumula. Cada experiencia agrega un movimiento y los estados anteriores pueden deformar los posteriores."
 }
