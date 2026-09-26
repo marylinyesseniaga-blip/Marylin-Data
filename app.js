@@ -285,3 +285,137 @@ document.getElementById("currentImage").src=img;
 });
 
 }
+/* ===================================================
+   ARCHIVO VIVO · VISOR DE ESTADOS
+=================================================== */
+
+async function iniciarArchivoVivo(){
+
+const res=await fetch("historial_estados.json");
+const historial=await res.json();
+
+/* ordenar por número real */
+
+historial.sort((a,b)=>{
+
+const na=parseInt((a.numero_estado||a.estado||"0").match(/\d+/));
+const nb=parseInt((b.numero_estado||b.estado||"0").match(/\d+/));
+
+return na-nb;
+
+});
+
+const slider=document.getElementById("historyRange");
+
+slider.min=0;
+slider.max=historial.length-1;
+slider.value=historial.length-1;
+
+function actualizar(i){
+
+const d=historial[i];
+
+const codigo=d.numero_estado||d.estado;
+
+document.getElementById("historyCurrent").textContent=codigo;
+document.getElementById("stateId").textContent=codigo;
+document.getElementById("dashState").textContent=codigo;
+document.getElementById("heroState").textContent=codigo;
+document.getElementById("monitorState").textContent=codigo;
+document.getElementById("captionState").textContent=codigo;
+
+/* fecha */
+
+const fecha=d.fecha||d.fecha_estado||"";
+document.getElementById("historyDate").textContent=fecha;
+document.getElementById("dashDate").textContent=fecha;
+document.getElementById("captionTime").textContent=fecha;
+
+/* imagen */
+
+document.getElementById("currentImage").src=`${codigo}.png`;
+
+/* métricas */
+
+if(d.seed) document.getElementById("dashSeed").textContent=d.seed;
+if(d.memoria) document.getElementById("dashMemory").textContent=d.memoria;
+if(d.estados) document.getElementById("dashStates").textContent=d.estados;
+if(d.huella) document.getElementById("dashIntensity").textContent=d.huella;
+
+/* lectura */
+
+if(d.estado_sistema)
+document.getElementById("systemStatus").textContent=d.estado_sistema;
+
+if(d.resumen)
+document.getElementById("readingSummary").textContent=d.resumen;
+
+if(d.pregunta)
+document.getElementById("readingQuestion").textContent=d.pregunta;
+
+/* geometría */
+
+if(d.densidad)
+document.getElementById("geoDensity").textContent=d.densidad;
+
+if(d.dispersion)
+document.getElementById("geoDispersion").textContent=d.dispersion;
+
+if(d.asimetria)
+document.getElementById("geoAsymmetry").textContent=d.asimetria;
+
+if(d.centro)
+document.getElementById("geoCenter").textContent=d.centro;
+
+/* observaciones */
+
+const obs=document.getElementById("readingObservations");
+obs.innerHTML="";
+
+if(Array.isArray(d.observaciones)){
+
+d.observaciones.forEach((t,n)=>{
+
+obs.innerHTML+=`
+<div class="reading-line">
+<span>${String(n+1).padStart(2,"0")}</span>
+<p>${t}</p>
+</div>`;
+
+});
+
+}
+
+/* fuerzas */
+
+const fuerzas=document.getElementById("forces");
+fuerzas.innerHTML="";
+
+if(d.fuerzas){
+
+Object.entries(d.fuerzas).forEach(([nombre,valor])=>{
+
+fuerzas.innerHTML+=`
+<div class="force">
+<div class="force-head">
+<span>${nombre.toUpperCase()}</span>
+<strong>${valor}</strong>
+</div>
+<div class="bar">
+<i style="width:${valor}%"></i>
+</div>
+</div>`;
+
+});
+
+}
+
+}
+
+slider.oninput=e=>actualizar(parseInt(e.target.value));
+
+actualizar(historial.length-1);
+
+}
+
+iniciarArchivoVivo();
