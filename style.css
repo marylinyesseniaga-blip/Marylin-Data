@@ -411,3 +411,84 @@
     color:#787068;
 
 }
+/*====================================
+ARCHIVO VIVO · SLIDER
+====================================*/
+
+.history-control{
+
+    margin-top:48px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+
+}
+
+.history-head{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+
+}
+
+.history-head span{
+
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#8b867d;
+
+}
+
+.history-head strong{
+
+    font-size:22px;
+    font-weight:700;
+    color:var(--text);
+
+}
+
+#historyRange{
+
+    width:100%;
+    appearance:none;
+    height:3px;
+    background:#d3cec3;
+    outline:none;
+    cursor:pointer;
+
+}
+
+#historyRange::-webkit-slider-thumb{
+
+    appearance:none;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:#b8860b;
+    border:none;
+
+}
+
+#historyRange::-moz-range-thumb{
+
+    width:16px;
+    height:16px;
+    border:none;
+    border-radius:50%;
+    background:#b8860b;
+
+}
+
+.history-caption{
+
+    margin-top:14px;
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.15em;
+    color:#8b867d;
+
+}
