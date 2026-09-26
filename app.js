@@ -57,13 +57,12 @@ function getArchiveItems(data){
 function stateNumber(value) {
   return Number(String(value || "").replace(/\D/g,"")) || 0;
 }
-
 function renderTrajectory(data){
 
-    const items=getArchiveItems(data)
+    const items = getArchiveItems(data)
         .sort((a,b)=>stateNumber(a.estado)-stateNumber(b.estado));
 
-    if(!items.length)return;
+    if(!items.length) return;
 
     const range=$("#historyRange");
     const current=$("#historyCurrent");
@@ -72,17 +71,19 @@ function renderTrajectory(data){
     const date=$("#historyDate");
 
     range.max=items.length-1;
-    range.value=items.length-1;
+    const ultimo=items.findIndex(x=>x.estado===$("#heroState")?.textContent);range.value=ultimo>=0?ultimo:items.length-1;
 
     start.textContent=items[0].estado;
     end.textContent=items[items.length-1].estado;
 
     updateState(items.length-1);
 
-    range.addEventListener("input",e=>{
+    range.oninput=(e)=>{
         updateState(Number(e.target.value));
-    });
-} 
+    };
+
+}
+function updateState(i){
 function updateState(i){
 
     const item = items[i];
