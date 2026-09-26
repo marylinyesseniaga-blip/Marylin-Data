@@ -107,46 +107,35 @@ function updateState(i){
     }
 
     // ---------- BUSCAR EL JSON DEL ESTADO ----------
-    fetch(item.estado + ".json?v=" + Date.now())
-        .then(r => r.ok ? r.json() : null)
-        .then(meta => {
+// ---------- DATOS DEL ESTADO DESDE historial_estados.json ----------
+const meta = item;
 
-            if(!meta) return;
+// Estado
+$("#heroStatus").textContent = meta.estado_sistema || meta.resultado || "CONTRADICCIÓN ACTIVA";
+$("#systemStatus").textContent = meta.estado_sistema || meta.resultado || "CONTRADICCIÓN ACTIVA";
 
-            $("#heroStatus").textContent = meta.estado_sistema || "";
-            $("#systemStatus").textContent = meta.estado_sistema || "";
+// KPIs
+$("#dashVersion").textContent = meta.version_sistema || "3.4";
+$("#dashSeed").textContent = meta.seed || "—";
+$("#dashMemory").textContent = meta.memoria || "—";
+$("#dashIntensity").textContent = Number(meta.huella || 0).toFixed(3);
 
-            // KPIs
-            $("#dashVersion").textContent = meta.version_sistema || "3.4";
-            $("#dashSeed").textContent = meta.seed || "—";
-            $("#dashMemory").textContent = meta.memoria.estados_con_memoria;
-            $("#dashIntensity").textContent = meta.huella.intensidad_huella.toFixed(3);
+// Métricas inferiores
+$("#metricMoves").textContent = meta.movimientos_registrados || "—";
+$("#metricPersistence").textContent = meta.persistencia || "—";
 
-            $("#metricMoves").textContent = meta.huella.movimientos_registrados;
-            $("#metricPersistence").textContent = meta.huella.persistencia.toFixed(2);
+// Geometría
+$("#geoDensity").textContent = Number(meta.densidad || 0).toFixed(3);
+$("#geoDispersion").textContent = Number(meta.dispersion || 0).toFixed(3);
+$("#geoAsymmetry").textContent = Number(meta.asimetria || 0).toFixed(3);
+$("#geoCenter").textContent =
+    `${Number(meta.centro_x || 0).toFixed(2)} / ${Number(meta.centro_y || 0).toFixed(2)}`;
 
-            // Geometría
-            $("#geoDensity").textContent =
-                meta.lectura.geometria.densidad.toFixed(3);
+// Fuerzas
+renderForces(meta);
 
-            $("#geoDispersion").textContent =
-                meta.lectura.geometria.dispersion.toFixed(3);
-
-            $("#geoAsymmetry").textContent =
-                meta.lectura.geometria.asimetria_vertical.toFixed(3);
-
-            $("#geoCenter").textContent =
-                meta.lectura.geometria.centro_x.toFixed(2) +
-                " / " +
-                meta.lectura.geometria.centro_y.toFixed(2);
-
-            // Fuerzas
-            renderForces(meta);
-
-            // Lectura completa
-            renderReading(meta);
-
-        });
+// Lectura
+renderReading(meta);    
 }
 function renderArchive(data) {
   const el = $("#archive");
