@@ -160,137 +160,150 @@
 
 /* ================================
    MARYLIN.DATA v4 · Genealogía
-   Pegar al final del style.css
 ================================ */
 
-/* ================================
-   MARYLIN.DATA v4 · Genealogía
-================================ */
+
+/* ===== GENEALOGÍA ===== */
 
 .genealogy-section{
-    padding:100px 0;
+  padding:100px 0;
 }
 
 .genealogy-intro{
-    max-width:640px;
-    color:var(--muted);
-    margin-bottom:40px;
+  max-width:650px;
+  color:var(--muted);
+  margin-bottom:35px;
 }
 
 /* Línea del tiempo */
 
 .timeline{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    position:relative;
-    margin:35px 0 55px;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  position:relative;
+  margin:35px 0 50px;
 }
 
 .timeline::before{
-    content:"";
-    position:absolute;
-    left:9%;
-    right:9%;
-    top:10px;
-    height:1px;
-    background:var(--gold);
+  content:"";
+  position:absolute;
+  left:9%;
+  right:9%;
+  top:10px;
+  height:1px;
+  background:var(--gold);
 }
 
 .timeline div{
-    text-align:center;
-    position:relative;
+  text-align:center;
+  position:relative;
 }
 
 .timeline div::before{
-    content:"";
-    width:10px;
-    height:10px;
-    background:var(--gold);
-    border-radius:50%;
-    display:block;
-    margin:0 auto 12px;
+  content:"";
+  width:10px;
+  height:10px;
+  background:var(--gold);
+  border-radius:50%;
+  display:block;
+  margin:0 auto 12px;
 }
 
 .timeline span{
-    font:10px 'DM Mono', monospace;
+  font:10px 'DM Mono', monospace;
 }
 
-/* ---------- TABLA ---------- */
+/* Tabla */
 
 .genealogy-table{
-    border-top:1px solid var(--line);
-    margin-top:20px;
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
 }
 
-.table-header{
-    display:grid;
-    grid-template-columns:140px 1.5fr 1.5fr;
-    gap:30px;
-    padding:14px 0;
-    border-bottom:1px solid var(--line);
+.genealogy-table thead th{
+  text-align:left;
+  padding:16px 0;
+  border-bottom:1px solid var(--line);
 
-    font:10px 'DM Mono', monospace;
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    color:var(--muted);
+  font:10px 'DM Mono', monospace;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--muted);
 }
 
-.table-item{
-    display:grid;
-    grid-template-columns:140px 1.5fr 1.5fr;
-    gap:30px;
-    padding:18px 0;
-    border-bottom:1px solid var(--line);
+.genealogy-table tbody td{
+  vertical-align:top;
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
 }
 
-.table-item .version{
-    font-weight:700;
+.genealogy-table th:first-child,
+.genealogy-table td:first-child{
+  width:18%;
 }
 
-/* ---------- IMAGEN FINAL ---------- */
+.genealogy-table th:nth-child(2),
+.genealogy-table td:nth-child(2){
+  width:41%;
+}
+
+.genealogy-table th:nth-child(3),
+.genealogy-table td:nth-child(3){
+  width:41%;
+}
+
+/* Imagen final */
 
 .estado-final{
-    margin-top:60px;
-    max-width:760px;
+  margin-top:55px;
+  max-width:760px;
 }
 
 .estado-final img{
-    width:100%;
-    display:block;
-    background:var(--paper);
-    border:1px solid var(--line);
-    padding:12px;
+  width:100%;
+  display:block;
+  border:1px solid var(--line);
+  background:var(--paper);
+  padding:14px;
 }
 
-.estado-caption{
-    margin-top:14px;
+.estado-final figcaption{
+  margin-top:14px;
+  color:var(--muted);
 }
 
-.estado-caption strong{
-    display:block;
-    margin-bottom:8px;
+.estado-final strong{
+  color:var(--text);
 }
-
-.estado-caption p{
-    color:var(--muted);
-}
-
-/* ---------- RESPONSIVE ---------- */
 
 @media(max-width:900px){
 
 .timeline{
 grid-template-columns:repeat(3,1fr);
-gap:28px;
+gap:25px;
 }
 
-.table-header{
+.genealogy-table thead{
 display:none;
 }
 
-.table-item{
-grid-template-columns:1fr;
-gap:8px;
+.genealogy-table,
+.genealogy-table tbody,
+.genealogy-table tr,
+.genealogy-table td{
+display:block;
+width:100%;
+}
+
+.genealogy-table tr{
+padding:18px 0;
+border-bottom:1px solid var(--line);
+}
+
+.genealogy-table td{
+padding:4px 0;
+border:none;
 }
 
 }
