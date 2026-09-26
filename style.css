@@ -613,3 +613,56 @@
     margin:26px 0 18px;
     max-width:760px;
 }
+.execution-panel{
+
+    border:1px solid #242424;
+
+    background:#050505;
+
+    padding:22px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.execution-label{
+
+    font-family:"DM Mono",monospace;
+
+    font-size:12px;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    color:#d0a32f;
+}
+
+.execution-video{
+
+    width:100%;
+
+    display:block;
+
+    border:1px solid #1f1f1f;
+}
+
+.execution-log{
+
+    border-top:1px solid #1f1f1f;
+
+    padding-top:16px;
+
+    display:grid;
+
+    gap:8px;
+
+    font-family:"DM Mono",monospace;
+
+    font-size:11px;
+
+    color:#d7d7d7;
+}
