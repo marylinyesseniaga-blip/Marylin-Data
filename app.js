@@ -152,7 +152,7 @@ renderReading(meta);
         img.alt = item.estado;
     }
     renderTrajectory(history);
-    renderArchive(archive);
+    renderArchive(history);
   } catch (err) {
     console.error(err);
     document.body.insertAdjacentHTML("afterbegin",
