@@ -195,7 +195,7 @@ async function safeLoad(path, fallback) {
 async function init() {
   try {
     const meta = await safeLoad("estado_actual_web.json", EMBEDDED_META);
-    const archive = await safeLoad("historial_estados.json", EMBEDDED_ARCHIVE);
+    const history = await safeLoad("historial_estados.json", EMBEDDED_ARCHIVE);
 
     const state = meta.estado || "—";
     window.MARYLIN_CURRENT_STATE = state;
@@ -246,7 +246,7 @@ async function init() {
     $("#metricIntensity").textContent = huella.intensidad_huella !== undefined ? Number(huella.intensidad_huella).toFixed(3) : "—";
 
     renderReading(meta);
-    renderTrajectory(archive);
+    renderTrajectory(history);
     renderArchive(archive);
   } catch (err) {
     console.error(err);
