@@ -163,6 +163,10 @@
    Pegar al final del style.css
 ================================ */
 
+/* ================================
+   MARYLIN.DATA v4 · Genealogía
+================================ */
+
 .genealogy-section{
     padding:100px 0;
 }
@@ -170,22 +174,24 @@
 .genealogy-intro{
     max-width:640px;
     color:var(--muted);
-    margin-bottom:45px;
+    margin-bottom:40px;
 }
+
+/* Línea del tiempo */
 
 .timeline{
     display:grid;
     grid-template-columns:repeat(6,1fr);
     position:relative;
-    margin-bottom:60px;
+    margin:35px 0 55px;
 }
 
 .timeline::before{
     content:"";
     position:absolute;
-    top:10px;
     left:9%;
     right:9%;
+    top:10px;
     height:1px;
     background:var(--gold);
 }
@@ -209,51 +215,67 @@
     font:10px 'DM Mono', monospace;
 }
 
-/* Galería de versiones */
+/* ---------- TABLA ---------- */
 
-.version-grid{
+.genealogy-table{
+    border-top:1px solid var(--line);
+    margin-top:20px;
+}
+
+.table-header{
     display:grid;
-    grid-template-columns:repeat(3,minmax(220px,1fr));
-    gap:34px;
-}
+    grid-template-columns:140px 1.5fr 1.5fr;
+    gap:30px;
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
 
-.version-card{
-    display:flex;
-    flex-direction:column;
-}
-
-.version-card img{
-    width:100%;
-    aspect-ratio:1/1;
-    object-fit:contain;
-    background:var(--paper);
-    border:1px solid var(--line);
-    padding:12px;
-    transition:.35s ease;
-}
-
-.version-card img:hover{
-    transform:translateY(-5px);
-}
-
-.version-card strong{
-    margin-top:14px;
-    font-size:15px;
-}
-
-.version-card p{
-    margin-top:6px;
-    font-size:13px;
+    font:10px 'DM Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:.12em;
     color:var(--muted);
 }
 
-.version-card.final{
-    grid-column:span 2;
+.table-item{
+    display:grid;
+    grid-template-columns:140px 1.5fr 1.5fr;
+    gap:30px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
 }
 
-.version-card.final img{
-    aspect-ratio:5/4;
+.table-item .version{
+    font-weight:700;
 }
+
+/* ---------- IMAGEN FINAL ---------- */
+
+.estado-final{
+    margin-top:60px;
+    max-width:760px;
+}
+
+.estado-final img{
+    width:100%;
+    display:block;
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:12px;
+}
+
+.estado-caption{
+    margin-top:14px;
+}
+
+.estado-caption strong{
+    display:block;
+    margin-bottom:8px;
+}
+
+.estado-caption p{
+    color:var(--muted);
+}
+
+/* ---------- RESPONSIVE ---------- */
 
 @media(max-width:900px){
 
@@ -262,12 +284,13 @@ grid-template-columns:repeat(3,1fr);
 gap:28px;
 }
 
-.version-grid{
-grid-template-columns:1fr;
+.table-header{
+display:none;
 }
 
-.version-card.final{
-grid-column:auto;
+.table-item{
+grid-template-columns:1fr;
+gap:8px;
 }
 
 }
