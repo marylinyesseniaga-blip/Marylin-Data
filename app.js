@@ -52,29 +52,59 @@ function stateNumber(value) {
 }
 
 function renderTrajectory(data) {
-  const items = getArchiveItems(data).sort((a,b) => stateNumber(a.estado) - stateNumber(b.estado));
-  const el = $("#trajectory");
-  if (!el) return;
-  if (!items.length) {
-    el.innerHTML = `<p class="section-note">Todavía no hay trayectoria publicada.</p>`;
+  const items = getArchiveItems(data)
+    .sort((a,b)=>stateNumber(a.estado)-stateNumber(b.estado));
+
+  const el = document.querySelector("#trajectory");
+  if(!el) return;
+
+  if(!items.length){
+    el.innerHTML="<p>No hay estados.</p>";
     return;
   }
 
-  $("#trajectoryFirst").textContent = items[0].estado || "—";
-  $("#trajectoryLast").textContent = items[items.length - 1].estado || "—";
+  let current = items.length-1;
 
-  el.innerHTML = `<div class="trajectory-track">${
-    items.map((item) => {
-      const current = item.estado === (window.MARYLIN_CURRENT_STATE || "");
-      return `<div class="trajectory-node ${current ? "current" : ""}">
-        <div class="dot"></div>
-        <span class="state">${item.estado || "—"}</span>
-        <span class="date">${item.fecha || ""}</span>
-      </div>`;
-    }).join("")
-  }</div>`;
+  el.innerHTML=`
+    <div class="history-slider">
+
+      <div class="history-preview">
+        <img id="historyImage" src="${items[current].fragmento}" alt="">
+      </div>
+
+      <div class="history-info">
+        <strong id="historyState">${items[current].estado}</strong>
+        <span id="historyDate">${items[current].fecha}</span>
+      </div>
+
+      <input
+        type="range"
+        id="historyRange"
+        min="0"
+        max="${items.length-1}"
+        value="${current}"
+      >
+
+      <div class="history-labels">
+        <span>${items[0].estado}</span>
+        <span>${items[current].estado}</span>
+      </div>
+
+    </div>
+  `;
+
+  const img=document.querySelector("#historyImage");
+  const state=document.querySelector("#historyState");
+  const date=document.querySelector("#historyDate");
+  const range=document.querySelector("#historyRange");
+
+  range.addEventListener("input",e=>{
+      const i=Number(e.target.value);
+      img.src=items[i].fragmento;
+      state.textContent=items[i].estado;
+      date.textContent=items[i].fecha;
+  });
 }
-
 function renderArchive(data) {
   const el = $("#archive");
   if (!el) return;
