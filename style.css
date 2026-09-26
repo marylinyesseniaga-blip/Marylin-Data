@@ -676,3 +676,76 @@
 
     color:#7a7a7a;
 }
+/* ===========================
+   VARIABLES DEL SISTEMA
+=========================== */
+
+.variables-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+    margin:34px 0 42px;
+}
+
+.variable-card{
+
+    border:1px solid var(--line);
+
+    background:#ede8dd;
+
+    padding:18px;
+
+    transition:.25s ease;
+}
+
+.variable-card:hover{
+
+    border-color:var(--gold);
+
+    transform:translateY(-2px);
+}
+
+.variable-card span{
+
+    display:block;
+
+    font-family:"DM Mono",monospace;
+
+    font-size:10px;
+
+    letter-spacing:.12em;
+
+    color:var(--gold);
+
+    margin-bottom:8px;
+}
+
+.variable-card h4{
+
+    margin:0 0 8px;
+
+    font-size:22px;
+}
+
+.variable-card p{
+
+    margin:0;
+
+    font-size:15px;
+
+    line-height:1.55;
+
+    color:#55514a;
+}
+
+@media(max-width:900px){
+
+    .variables-grid{
+
+        grid-template-columns:1fr;
+    }
+}
