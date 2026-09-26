@@ -170,6 +170,22 @@
 }
 }
 
+/* ===== HERO LIVE SYSTEM ===== */
+
+.hero-image{
+    margin:28px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:560px;
+    aspect-ratio:1/1;
+    object-fit:contain;
+    display:block;
+}
 /* ==========================================================
    NOTA
    Este bloque sustituye el CSS anterior de:
