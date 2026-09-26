@@ -18,3 +18,120 @@
 @media(max-width:650px){.hero{padding-top:55px;padding-bottom:65px;}}
 /* Evita cajas altas sin contenido y mantiene la proporción original de los mapas. */
 .memory-main .image-frame img,.temporal-card .image-frame img{height:auto;object-fit:contain;}
+/* =========================================================
+   GENEALOGÍA · Línea temporal + Tabla + Galería de versiones
+   ========================================================= */
+
+.version-line{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:16px;
+  margin:40px 0;
+  position:relative;
+}
+
+.version-line::before{
+  content:"";
+  position:absolute;
+  top:10px;
+  left:0;
+  right:0;
+  height:2px;
+  background:var(--gold);
+}
+
+.version-line span{
+  position:relative;
+  text-align:center;
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  color:var(--muted);
+}
+
+.version-line span::before{
+  content:"";
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--gold);
+  display:block;
+  margin:0 auto 10px;
+}
+
+.version-table{
+  width:100%;
+  border-collapse:collapse;
+  margin:32px 0 60px;
+}
+
+.version-table th{
+  text-align:left;
+  padding:14px 0;
+  border-bottom:1px solid var(--line);
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  letter-spacing:.08em;
+  color:var(--muted);
+}
+
+.version-table td{
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+
+.version-table td:first-child{
+  width:18%;
+  font-weight:700;
+}
+
+.version-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  margin-top:36px;
+}
+
+.version-card{
+  display:flex;
+  flex-direction:column;
+}
+
+.version-card img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:contain;
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:10px;
+}
+
+.version-card p{
+  margin-top:10px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+@media(max-width:900px){
+
+  .version-line{
+    grid-template-columns:repeat(3,1fr);
+    row-gap:26px;
+  }
+
+  .version-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .version-table{
+    display:block;
+    overflow-x:auto;
+  }
+}
+
+@media(max-width:600px){
+
+  .version-grid{
+    grid-template-columns:1fr;
+  }
+}
