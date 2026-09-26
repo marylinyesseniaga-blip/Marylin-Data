@@ -182,3 +182,147 @@
     grid-template-columns:1fr;
   }
 }
+/* =========================================================
+   GENEALOGÍA · MARYLIN.DATA
+=========================================================*/
+
+.genealogy-section{
+    margin-top:140px;
+}
+
+.genealogy-head h2{
+    margin:12px 0 16px;
+}
+
+.timeline{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    text-align:center;
+    margin:70px 0 60px;
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#5d5953;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:5%;
+    right:5%;
+    top:0;
+    height:2px;
+    background:#b88619;
+}
+
+.timeline div{
+    position:relative;
+    padding-top:22px;
+}
+
+.timeline div::before{
+    content:"";
+    position:absolute;
+    top:-6px;
+    left:50%;
+    transform:translateX(-50%);
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#b88619;
+}
+
+.genealogia-tabla{
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:80px;
+}
+
+.genealogia-tabla th{
+    text-align:left;
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#777067;
+    padding:18px 0;
+    border-bottom:1px solid #c7c0b4;
+}
+
+.genealogia-tabla td{
+    padding:20px 0;
+    vertical-align:top;
+    border-bottom:1px solid #d7d0c5;
+    line-height:1.65;
+}
+
+.genealogia-tabla td:first-child{
+    width:18%;
+    font-weight:700;
+}
+
+.archivo-header{
+    margin-bottom:34px;
+}
+
+.archivo-header span{
+    display:block;
+    margin-bottom:8px;
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#777067;
+}
+
+.version-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:34px;
+}
+
+.version-card{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.version-card img{
+    width:100%;
+    height:260px;
+    object-fit:contain;
+    background:#efe9dc;
+    border:1px solid #c9c1b3;
+    padding:18px;
+}
+
+.version-card p{
+    font-size:13px;
+    color:#4b4741;
+    line-height:1.5;
+}
+
+@media (max-width:900px){
+
+    .timeline{
+        grid-template-columns:repeat(3,1fr);
+        row-gap:40px;
+    }
+
+    .version-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:640px){
+
+    .version-grid{
+        grid-template-columns:1fr;
+    }
+
+    .genealogia-tabla{
+        display:block;
+        overflow-x:auto;
+    }
+
+}
