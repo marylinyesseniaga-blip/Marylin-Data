@@ -255,3 +255,33 @@ function initMotion() {
 }
 initMotion();
 init();
+/* ======================================
+   ARCHIVO VIVO INTERACTIVO
+====================================== */
+
+const slider=document.getElementById("historyRange");
+
+if(slider){
+
+slider.addEventListener("input",()=>{
+
+const n=parseInt(slider.value);
+
+const codigo=`MD_${String(n).padStart(4,"0")}`;
+
+document.getElementById("historyCurrent").textContent=codigo;
+document.getElementById("historyDate").textContent=`2026-09-${String(Math.min(n,30)).padStart(2,"0")}`;
+
+document.getElementById("stateId").textContent=codigo;
+document.getElementById("dashState").textContent=codigo;
+document.getElementById("heroState").textContent=codigo;
+document.getElementById("monitorState").textContent=codigo;
+document.getElementById("captionState").textContent=codigo;
+
+const img=`${codigo}.png`;
+
+document.getElementById("currentImage").src=img;
+
+});
+
+}
