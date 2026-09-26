@@ -194,25 +194,26 @@ lectura = generar_lectura_estado(
     </div>
   </div>
 </section>
-  <div class="memory-slider">
+<!-- CONTROL DEL ARCHIVO -->
+<div class="history-control">
+    <div class="history-head">
+        <span id="historyStart">MD_0001</span>
+        <strong id="historyCurrent">MD_0022</strong>
+        <span id="historyEnd">MD_0022</span>
+    </div>
 
-  <div class="slider-head">
-    <span>RECORRER EL ARCHIVO</span>
-    <strong id="sliderLabel">MD_0024</strong>
-  </div>
+    <input
+        type="range"
+        id="historyRange"
+        min="0"
+        max="0"
+        value="0"
+    >
 
-  <input
-    type="range"
-    id="estadoSlider"
-    min="1"
-    max="24"
-    value="24">
-
-  <div class="slider-scale">
-    <span>MD_0001</span>
-    <span>MD_0024</span>
-  </div>
-
+    <div class="history-caption">
+        <span>Explorar Archivo Vivo</span>
+        <span id="historyDate">2026-09-22</span>
+    </div>
 </div>
 <section class="section memory-section" id="memoria">
   <div class="memory-head"><div><p class="eyebrow">02 · ACUMULACIÓN</p><h2>Memoria<br><em>y huella.</em></h2></div><p>El estado actual es solo una sección del proceso. Aquí la obra muestra lo que permanece cuando los estados se acumulan.</p></div>
