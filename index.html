@@ -193,30 +193,33 @@ lectura = generar_lectura_estado(
       <div class="reading-panel" id="lectura"><div class="reading-head"><div><span class="eyebrow">LECTURA FORMAL</span><h3 id="readingTitle">LECTURA DEL ESTADO · MD_0022</h3></div><span>NO PSICOLÓGICA</span></div><div class="geometry"><div><span>DENSIDAD</span><strong id="geoDensity">0.055</strong></div><div><span>DISPERSIÓN</span><strong id="geoDispersion">0.939</strong></div><div><span>ASIMETRÍA</span><strong id="geoAsymmetry">0.243</strong></div><div><span>CENTRO</span><strong id="geoCenter">0.50 / 0.54</strong></div></div><p class="reading-summary" id="readingSummary">El estado combina baja densidad, asimetría contenida y una dispersión amplia del campo visual.</p><div class="reading-observations" id="readingObservations"></div><aside class="reading-question"><span>?</span><p id="readingQuestion">¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?</p></aside></div>
     </div>
   </div>
-  <div class="state-grid">
-    ...
-</div>
-
-<!-- CONTROL DEL ARCHIVO -->
+<!-- CONTROL DEL ARCHIVO VIVO -->
 <div class="history-control">
-    <div class="history-head">
-        <span id="historyStart">MD_0001</span>
+
+    <div class="history-title">
+        <span>ARCHIVO VIVO</span>
         <strong id="historyCurrent">MD_0022</strong>
-        <span id="historyEnd">MD_0022</span>
     </div>
 
     <input
         type="range"
         id="historyRange"
-        min="0"
-        max="0"
-        value="0"
-    >
+        min="1"
+        max="22"
+        value="22"
+        step="1">
+
+    <div class="history-scale">
+        <span id="historyStart">MD_0001</span>
+        <span id="historyMiddle">MD_0011</span>
+        <span id="historyEnd">MD_0022</span>
+    </div>
 
     <div class="history-caption">
         <span>Explorar Archivo Vivo</span>
         <span id="historyDate">2026-09-22</span>
     </div>
+
 </div>
 </section>
 
