@@ -411,23 +411,65 @@
     color:#787068;
 
 }
+/* ==========================================
+   ARCHIVO VIVO · CONTROL DESLIZANTE
+========================================== */
+
 .history-control{
+    margin-top:14px;
+    padding:0;
+}
 
-margin:22px 0 12px;
-padding:0 4px;
+.history-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:12px;
 
+    font-family:"DM Mono", monospace;
+    font-size:10px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#6f695d;
+}
+
+.history-title strong{
+    color:#111;
+    font-size:16px;
 }
 
 #historyRange{
+    width:100%;
+    height:2px;
+    appearance:none;
+    background:#b9b5aa;
+    outline:none;
+    cursor:pointer;
+}
 
-width:100%;
-height:4px;
+#historyRange::-webkit-slider-thumb{
+    appearance:none;
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#b48527;
+    border:2px solid #111;
+}
 
+#historyRange::-moz-range-thumb{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#b48527;
+    border:2px solid #111;
 }
 
 .history-scale{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
 
-margin-top:10px;
-
+    font-family:"DM Mono", monospace;
+    font-size:9px;
+    color:#7c776c;
 }
-
