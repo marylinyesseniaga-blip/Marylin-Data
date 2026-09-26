@@ -76,54 +76,77 @@ function renderTrajectory(data){
         updateState(Number(e.target.value));
     });
 
-    function updateState(i){
+function updateState(i){
 
-        const item=items[i];
+    const item = items[i];
 
-        current.textContent=item.estado;
-        date.textContent=item.fecha;
+    current.textContent = item.estado;
+    date.textContent = item.fecha;
 
-        /* HERO */
-        const hero=$("#heroState");
-        if(hero)hero.textContent=item.estado;
+    // ---------- CABECERA ----------
+    $("#heroState").textContent = item.estado;
+    $("#heroDate").textContent = item.fecha;
 
-        const heroDate=$("#heroDate");
-        if(heroDate)heroDate.textContent=item.fecha;
+    $("#dashState").textContent = item.estado;
+    $("#stateId").textContent = item.estado;
+    $("#monitorState").textContent = item.estado;
+    $("#captionState").textContent = item.estado;
+    $("#captionTime").textContent = item.fecha;
+    $("#dashDate").textContent = item.fecha;
 
-        /* DASHBOARD */
-        const dash=$("#dashState");
-        if(dash)dash.textContent=item.estado;
+    // ---------- CONTADOR ----------
+    $("#metricStates").textContent = i + 1;
+    $("#monitorStates").textContent = i + 1;
+    $("#dashStates").textContent = i + 1;
 
-        const caption=$("#captionState");
-        if(caption)caption.textContent=item.estado;
-
-        const stateId=$("#stateId");
-        if(stateId)stateId.textContent=item.estado;
-
-        const monitor=$("#monitorState");
-        if(monitor)monitor.textContent=item.estado;
-
-        /* CONTADOR DE ESTADOS */
-        const total=$("#metricStates");
-        if(total)total.textContent=i+1;
-
-        const monitorStates=$("#monitorStates");
-        if(monitorStates)monitorStates.textContent=i+1;
-
-        const dashDate=$("#dashDate");
-        if(dashDate)dashDate.textContent=item.fecha;
-
-        /* IMAGEN PRINCIPAL */
-
-        const img=document.querySelector("#estadoActualImg");
-
-        if(img && item.fragmento){
-
-            img.src=item.fragmento;
-            img.alt=item.estado;
-
-        }
+    // ---------- IMAGEN ----------
+    const img = $("#currentImage");
+    if(img){
+        img.src = item.fragmento + "?v=" + Date.now();
+        img.alt = item.estado;
     }
+
+    // ---------- BUSCAR EL JSON DEL ESTADO ----------
+    fetch(item.estado + ".json?v=" + Date.now())
+        .then(r => r.ok ? r.json() : null)
+        .then(meta => {
+
+            if(!meta) return;
+
+            $("#heroStatus").textContent = meta.estado_sistema || "";
+            $("#systemStatus").textContent = meta.estado_sistema || "";
+
+            // KPIs
+            $("#dashVersion").textContent = meta.version_sistema || "3.4";
+            $("#dashSeed").textContent = meta.seed || "—";
+            $("#dashMemory").textContent = meta.memoria.estados_con_memoria;
+            $("#dashIntensity").textContent = meta.huella.intensidad_huella.toFixed(3);
+
+            $("#metricMoves").textContent = meta.huella.movimientos_registrados;
+            $("#metricPersistence").textContent = meta.huella.persistencia.toFixed(2);
+
+            // Geometría
+            $("#geoDensity").textContent =
+                meta.lectura.geometria.densidad.toFixed(3);
+
+            $("#geoDispersion").textContent =
+                meta.lectura.geometria.dispersion.toFixed(3);
+
+            $("#geoAsymmetry").textContent =
+                meta.lectura.geometria.asimetria_vertical.toFixed(3);
+
+            $("#geoCenter").textContent =
+                meta.lectura.geometria.centro_x.toFixed(2) +
+                " / " +
+                meta.lectura.geometria.centro_y.toFixed(2);
+
+            // Fuerzas
+            renderForces(meta);
+
+            // Lectura completa
+            renderReading(meta);
+
+        });
 }
 function renderArchive(data) {
   const el = $("#archive");
