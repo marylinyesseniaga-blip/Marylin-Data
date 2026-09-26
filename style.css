@@ -21,75 +21,120 @@
 /* =========================================================
    GENEALOGÍA · Línea temporal + Tabla + Galería de versiones
    ========================================================= */
+/* ==========================================
+   GENEALOGÍA
+========================================== */
 
-.version-line{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:16px;
-  margin:40px 0;
-  position:relative;
+.genealogy-section{
+  padding:120px 0;
 }
 
-.version-line::before{
+.genealogy-head{
+  margin-bottom:48px;
+}
+
+.genealogy-head h2{
+  font-size:48px;
+  margin:12px 0;
+}
+
+.genealogy-head p:last-child{
+  color:var(--muted);
+}
+
+/* Línea temporal */
+
+.timeline{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  position:relative;
+  margin:48px 0 64px;
+  gap:12px;
+}
+
+.timeline::before{
   content:"";
   position:absolute;
-  top:10px;
+  top:7px;
   left:0;
   right:0;
   height:2px;
   background:var(--gold);
 }
 
-.version-line span{
+.timeline div{
   position:relative;
   text-align:center;
-  font-family:'DM Mono',monospace;
-  font-size:10px;
+  font-size:11px;
+  font-family:"DM Mono",monospace;
   color:var(--muted);
 }
 
-.version-line span::before{
+.timeline div::before{
   content:"";
+  display:block;
   width:10px;
   height:10px;
+  margin:0 auto 12px;
   border-radius:50%;
   background:var(--gold);
-  display:block;
-  margin:0 auto 10px;
 }
 
-.version-table{
+/* Tabla */
+
+.genealogia-tabla{
   width:100%;
   border-collapse:collapse;
-  margin:32px 0 60px;
+  margin-bottom:90px;
 }
 
-.version-table th{
+.genealogia-tabla th{
   text-align:left;
-  padding:14px 0;
+  padding:16px 0;
   border-bottom:1px solid var(--line);
-  font-family:'DM Mono',monospace;
-  font-size:10px;
+  font-family:"DM Mono",monospace;
+  font-size:11px;
   letter-spacing:.08em;
   color:var(--muted);
 }
 
-.version-table td{
+.genealogia-tabla td{
   padding:18px 0;
   border-bottom:1px solid var(--line);
   vertical-align:top;
+  line-height:1.6;
 }
 
-.version-table td:first-child{
+.genealogia-tabla td:first-child{
   width:18%;
   font-weight:700;
 }
+
+/* Archivo vivo */
+
+.archivo-header{
+  margin-bottom:36px;
+}
+
+.archivo-header span{
+  display:block;
+  font-family:"DM Mono",monospace;
+  font-size:11px;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+
+.archivo-header h2{
+  font-size:40px;
+  margin-bottom:12px;
+}
+
+/* Galería */
 
 .version-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:28px;
-  margin-top:36px;
 }
 
 .version-card{
@@ -103,33 +148,35 @@
   object-fit:contain;
   background:var(--paper);
   border:1px solid var(--line);
-  padding:10px;
+  padding:14px;
 }
 
 .version-card p{
-  margin-top:10px;
+  margin-top:12px;
   font-size:13px;
   color:var(--muted);
 }
 
+/* Responsive */
+
 @media(max-width:900px){
 
-  .version-line{
+  .timeline{
     grid-template-columns:repeat(3,1fr);
-    row-gap:26px;
+    row-gap:24px;
   }
 
   .version-grid{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .version-table{
+  .genealogia-tabla{
     display:block;
     overflow-x:auto;
   }
 }
 
-@media(max-width:600px){
+@media(max-width:640px){
 
   .version-grid{
     grid-template-columns:1fr;
