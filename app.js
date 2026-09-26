@@ -82,7 +82,7 @@ function renderTrajectory(data){
     range.addEventListener("input",e=>{
         updateState(Number(e.target.value));
     });
-
+} 
 function updateState(i){
 
     const item = items[i];
@@ -147,20 +147,27 @@ renderReading(meta);
 
     // ---------- IMAGEN ----------
     const img = $("#currentImage");
-    if(img){
-        img.src = item.fragmento + "?v=" + Date.now();
-        img.alt = item.estado;
-    }
-    renderTrajectory(history);
-    renderArchive(history);
-  } catch (err) {
-    console.error(err);
-    document.body.insertAdjacentHTML("afterbegin",
-      `<div style="padding:12px 18px;background:#151515;color:#fff;font:12px monospace">
-       No fue posible cargar los datos públicos. Si estás probando el sitio localmente, ábrelo mediante un servidor web local.
-       </div>`);
-  }
+
+if(img){
+    img.src = item.fragmento + "?v=" + Date.now();
+    img.alt = item.estado;
 }
+
+$("#heroState").textContent = item.estado;
+$("#dashState").textContent = item.estado;
+$("#stateId").textContent = item.estado;
+$("#monitorState").textContent = item.estado;
+
+$("#heroDate").textContent = item.fecha;
+$("#dashDate").textContent = item.fecha;
+$("#captionTime").textContent = item.fecha;
+
+$("#metricStates").textContent = i + 1;
+$("#monitorStates").textContent = i + 1;
+$("#dashStates").textContent = i + 1;
+
+renderForces(meta);
+renderReading(meta);
 function initMotion() {
   const items = document.querySelectorAll('.section, .hero-monitor, .state-dash-card, .code-card, .anatomy-grid > div');
   items.forEach(el => el.classList.add('reveal'));
