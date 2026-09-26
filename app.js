@@ -51,59 +51,79 @@ function stateNumber(value) {
   return Number(String(value || "").replace(/\D/g,"")) || 0;
 }
 
-function renderTrajectory(data) {
-  const items = getArchiveItems(data)
-    .sort((a,b)=>stateNumber(a.estado)-stateNumber(b.estado));
+function renderTrajectory(data){
 
-  const el = document.querySelector("#trajectory");
-  if(!el) return;
+    const items=getArchiveItems(data)
+        .sort((a,b)=>stateNumber(a.estado)-stateNumber(b.estado));
 
-  if(!items.length){
-    el.innerHTML="<p>No hay estados.</p>";
-    return;
-  }
+    if(!items.length)return;
 
-  let current = items.length-1;
+    const range=$("#historyRange");
+    const current=$("#historyCurrent");
+    const start=$("#historyStart");
+    const end=$("#historyEnd");
+    const date=$("#historyDate");
 
-  el.innerHTML=`
-    <div class="history-slider">
+    range.max=items.length-1;
+    range.value=items.length-1;
 
-      <div class="history-preview">
-        <img id="historyImage" src="${items[current].fragmento}" alt="">
-      </div>
+    start.textContent=items[0].estado;
+    end.textContent=items[items.length-1].estado;
 
-      <div class="history-info">
-        <strong id="historyState">${items[current].estado}</strong>
-        <span id="historyDate">${items[current].fecha}</span>
-      </div>
+    updateState(items.length-1);
 
-      <input
-        type="range"
-        id="historyRange"
-        min="0"
-        max="${items.length-1}"
-        value="${current}"
-      >
+    range.addEventListener("input",e=>{
+        updateState(Number(e.target.value));
+    });
 
-      <div class="history-labels">
-        <span>${items[0].estado}</span>
-        <span>${items[current].estado}</span>
-      </div>
+    function updateState(i){
 
-    </div>
-  `;
+        const item=items[i];
 
-  const img=document.querySelector("#historyImage");
-  const state=document.querySelector("#historyState");
-  const date=document.querySelector("#historyDate");
-  const range=document.querySelector("#historyRange");
+        current.textContent=item.estado;
+        date.textContent=item.fecha;
 
-  range.addEventListener("input",e=>{
-      const i=Number(e.target.value);
-      img.src=items[i].fragmento;
-      state.textContent=items[i].estado;
-      date.textContent=items[i].fecha;
-  });
+        /* HERO */
+        const hero=$("#heroState");
+        if(hero)hero.textContent=item.estado;
+
+        const heroDate=$("#heroDate");
+        if(heroDate)heroDate.textContent=item.fecha;
+
+        /* DASHBOARD */
+        const dash=$("#dashState");
+        if(dash)dash.textContent=item.estado;
+
+        const caption=$("#captionState");
+        if(caption)caption.textContent=item.estado;
+
+        const stateId=$("#stateId");
+        if(stateId)stateId.textContent=item.estado;
+
+        const monitor=$("#monitorState");
+        if(monitor)monitor.textContent=item.estado;
+
+        /* CONTADOR DE ESTADOS */
+        const total=$("#metricStates");
+        if(total)total.textContent=i+1;
+
+        const monitorStates=$("#monitorStates");
+        if(monitorStates)monitorStates.textContent=i+1;
+
+        const dashDate=$("#dashDate");
+        if(dashDate)dashDate.textContent=item.fecha;
+
+        /* IMAGEN PRINCIPAL */
+
+        const img=document.querySelector("#estadoActualImg");
+
+        if(img && item.fragmento){
+
+            img.src=item.fragmento;
+            img.alt=item.estado;
+
+        }
+    }
 }
 function renderArchive(data) {
   const el = $("#archive");
