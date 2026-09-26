@@ -629,9 +629,10 @@
 
     flex-direction:column;
 
-    gap:16px;
-}
+    gap:14px;
 
+    height:100%;
+}
 .execution-label{
 
     font-family:"DM Mono", monospace;
@@ -664,17 +665,17 @@
 
     border-top:1px solid #1f1f1f;
 
-    padding-top:12px;
+    padding-top:10px;
 
     display:flex;
 
     justify-content:space-between;
 
-    font-family:"DM Mono", monospace;
+    font-family:"DM Mono",monospace;
 
     font-size:10px;
 
     letter-spacing:.08em;
 
-    color:#8f8f8f;
+    color:#7a7a7a;
 }
