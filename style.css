@@ -1,198 +1,350 @@
 /* ==========================================================
-   MARYLIN.DATA — style.css v4.0
-   Edición curatorial · GitHub Pages
-   Ajustes para Genealogía + Estado Acumulado
-   (Añadir al final o reemplazar el bloque Genealogía)
-========================================================== */
+   MARYLIN.DATA — style.css v4.1
+   Restauración + ajustes editoriales
+   ========================================================== */
 
-/* ---------- GENEALOGÍA ---------- */
-
-.genealogy-section{
-    padding:100px 0;
+:root{
+  --paper:#EFE9DD;
+  --paper-2:#E7E0D1;
+  --text:#202020;
+  --muted:#6D675F;
+  --line:#CFC7B7;
+  --gold:#B6852A;
+  --dark:#0A0A0A;
 }
 
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Arial,sans-serif;
+  background:var(--paper);
+  color:var(--text);
+  line-height:1.6;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+.container{
+  width:min(1200px,92vw);
+  margin:auto;
+}
+
+nav{
+  display:flex;
+  gap:26px;
+  justify-content:center;
+  padding:28px 0;
+  font:11px "IBM Plex Mono",monospace;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  border-bottom:1px solid var(--line);
+}
+
+/* HERO */
+
+#hero{padding:60px 0 90px}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:70px;
+  align-items:center;
+}
+.eyebrow{
+  font:10px "IBM Plex Mono",monospace;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.hero h1{
+  font:700 clamp(42px,6vw,74px)/.95 "Libre Baskerville",serif;
+  margin:16px 0;
+}
+.hero-question{
+  font:italic clamp(24px,3vw,34px) "Libre Baskerville",serif;
+  margin:26px 0;
+}
+.hero-key{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  padding:10px 16px;
+  background:#1A1A1A;
+  color:#fff;
+  font:11px "IBM Plex Mono",monospace;
+}
+
+.hero-system{
+  background:#090909;
+  color:#fff;
+  padding:24px;
+  border:1px solid rgba(255,255,255,.06);
+}
+.hero-system-head{
+  display:flex;
+  justify-content:space-between;
+  font:10px "IBM Plex Mono",monospace;
+  letter-spacing:.16em;
+}
+.pulse{color:var(--gold)}
+.hero-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:28px 0;
+}
+.hero-image img{
+  width:100%;
+  max-width:560px;
+  aspect-ratio:1/1;
+  object-fit:contain;
+}
+.hero-system-data{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid rgba(255,255,255,.18);
+  padding-top:18px;
+  gap:12px;
+}
+.hero-system-data div{
+  border-left:1px solid rgba(255,255,255,.14);
+  padding-left:12px;
+}
+.hero-system-data div:first-child{border-left:none;padding-left:0}
+.hero-system-data small{
+  display:block;
+  font:10px "IBM Plex Mono",monospace;
+  color:#B7B7B7;
+}
+.hero-system-data strong{
+  display:block;
+  margin-top:6px;
+  font-size:22px;
+}
+
+/* SECCIONES */
+
+.section{padding:90px 0}
+.section h2{
+  font:700 clamp(30px,4vw,44px)/1.1 "Libre Baskerville",serif;
+  margin:12px 0 26px;
+}
+.lead{
+  max-width:760px;
+  color:var(--muted);
+}
+
+/* ORIGEN */
+
+.origin-grid{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:48px;
+  margin-top:34px;
+}
+.origin-card{
+  background:#111;
+  color:#fff;
+  padding:30px;
+}
+.origin-card span{
+  display:block;
+  font:10px "IBM Plex Mono",monospace;
+  letter-spacing:.16em;
+  margin-bottom:12px;
+}
+.origin-card strong{
+  font:700 30px/1 "Libre Baskerville",serif;
+  display:block;
+  margin-bottom:12px;
+}
+
+/* ANATOMÍA */
+
+.input-system{
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  padding:28px;
+  margin-top:34px;
+}
+.input-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin:18px 0;
+}
+.input-grid div{
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:16px;
+  text-align:center;
+  font:11px "IBM Plex Mono",monospace;
+}
+
+/* GENEALOGÍA */
+
+.genealogy-section{padding:100px 0}
 .genealogy-intro{
-    max-width:650px;
-    color:var(--muted);
-    margin-bottom:35px;
+  max-width:640px;
+  color:var(--muted);
+  margin-bottom:40px;
 }
-
-/* ---------- LÍNEA DEL TIEMPO ---------- */
-
 .timeline{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    position:relative;
-    margin:35px 0 55px;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  position:relative;
+  margin:34px 0 48px;
 }
-
-.timeline::before{
-    content:"";
-    position:absolute;
-    top:10px;
-    left:7%;
-    right:4%;
-    height:2px;
-    background:var(--gold);
+.timeline:before{
+  content:"";
+  position:absolute;
+  left:7%;
+  right:4%;
+  top:10px;
+  height:2px;
+  background:var(--gold);
 }
-
-.timeline div{
-    text-align:center;
-    position:relative;
+.timeline div{text-align:center;position:relative}
+.timeline div:before{
+  content:"";
+  width:10px;height:10px;border-radius:50%;
+  background:var(--gold);
+  display:block;
+  margin:0 auto 12px;
 }
-
-.timeline div::before{
-    content:"";
-    width:10px;
-    height:10px;
-    background:var(--gold);
-    border-radius:50%;
-    display:block;
-    margin:0 auto 12px;
-}
-
 .timeline span{
-    font:10px 'DM Mono', monospace;
-    letter-spacing:.08em;
-    text-transform:uppercase;
+  font:10px "IBM Plex Mono",monospace;
+  letter-spacing:.08em;
 }
-
-/* ---------- TABLA EDITORIAL ---------- */
 
 .genealogy-table{
-    width:92%;
-    max-width:980px;
-    margin:25px auto 0;
-    border-collapse:collapse;
+  width:92%;
+  max-width:980px;
+  margin:25px auto 0;
+  border-collapse:collapse;
 }
-
-.genealogy-table thead th{
-    text-align:left;
-    padding:18px 0 14px;
-    border-bottom:1px solid var(--line);
-
-    font:10px 'DM Mono', monospace;
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    color:var(--muted);
+.genealogy-table th{
+  text-align:left;
+  padding:18px 0 14px;
+  border-bottom:1px solid var(--line);
+  font:10px "IBM Plex Mono",monospace;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--muted);
 }
-
-.genealogy-table tbody td{
-    vertical-align:top;
-    padding:22px 0;
-    border-bottom:1px solid var(--line);
-    line-height:1.55;
+.genealogy-table td{
+  vertical-align:top;
+  padding:22px 12px 22px 0;
+  border-bottom:1px solid var(--line);
+  line-height:1.55;
 }
-
 .genealogy-table th:first-child,
-.genealogy-table td:first-child{
-    width:22%;
-    font-weight:700;
-}
-
+.genealogy-table td:first-child{width:22%;font-weight:700}
 .genealogy-table th:nth-child(2),
-.genealogy-table td:nth-child(2){
-    width:39%;
-}
-
+.genealogy-table td:nth-child(2){width:39%}
 .genealogy-table th:nth-child(3),
-.genealogy-table td:nth-child(3){
-    width:39%;
-}
-
-/* Hover muy sutil */
-
-.genealogy-table tbody tr:hover{
-    background:rgba(180,133,39,.03);
-}
-
-/* ---------- ESTADO FINAL ---------- */
+.genealogy-table td:nth-child(3){width:39%}
+.genealogy-table tbody tr:hover{background:rgba(182,133,42,.03)}
 
 .estado-final{
-    margin:80px auto 0;
-    max-width:900px;
-    text-align:center;
+  margin:80px auto 0;
+  max-width:900px;
+  text-align:center;
 }
-
 .estado-final img{
-    width:100%;
-    display:block;
-    background:var(--paper);
-    border:1px solid var(--line);
-    padding:18px;
+  width:100%;
+  border:1px solid var(--line);
+  background:var(--paper);
+  padding:18px;
 }
-
 .estado-final figcaption{
-    margin-top:18px;
-    color:var(--muted);
-    line-height:1.6;
+  margin-top:18px;
+  color:var(--muted);
 }
-
 .estado-final strong{
-    color:var(--text);
-    display:block;
-    margin-bottom:6px;
+  display:block;
+  color:var(--text);
+  margin-bottom:8px;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* ARCHIVO */
 
-@media (max-width:900px){
+.archive{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+}
+.archive-card{
+  border:1px solid var(--line);
+  background:#F8F4EB;
+  padding:12px;
+  transition:.25s;
+}
+.archive-card:hover{transform:translateY(-4px)}
+
+/* FOOTER */
+
+footer{
+  padding:60px 0;
+  border-top:1px solid var(--line);
+  text-align:center;
+  color:var(--muted);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+nav{
+  flex-wrap:wrap;
+  gap:16px;
+}
+
+.hero-grid,
+.origin-grid{
+  grid-template-columns:1fr;
+}
+
+.hero-system-data{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.input-grid{
+  grid-template-columns:1fr 1fr;
+}
 
 .timeline{
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
 }
 
 .genealogy-table{
-    width:100%;
+  width:100%;
 }
 
 .genealogy-table thead{
-    display:none;
+  display:none;
 }
 
 .genealogy-table,
 .genealogy-table tbody,
 .genealogy-table tr,
 .genealogy-table td{
-    display:block;
-    width:100%;
+  display:block;
+  width:100%;
 }
 
 .genealogy-table tr{
-    padding:18px 0;
-    border-bottom:1px solid var(--line);
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
 }
 
 .genealogy-table td{
-    padding:4px 0;
-    border:none;
-}
-}
-
-/* ===== HERO LIVE SYSTEM ===== */
-
-.hero-image{
-    margin:28px 0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+  padding:4px 0;
+  border:none;
 }
 
-.hero-image img{
-    width:100%;
-    max-width:560px;
-    aspect-ratio:1/1;
-    object-fit:contain;
-    display:block;
+.estado-final{
+  margin-top:60px;
 }
-/* ==========================================================
-   NOTA
-   Este bloque sustituye el CSS anterior de:
-   - .version-grid
-   - .version-card
-   - .table-header
-   - .table-item
-   Mantiene la estética editorial del catálogo y evita
-   la duplicación visual entre Genealogía y Archivo Vivo.
-========================================================== */
+
+}
