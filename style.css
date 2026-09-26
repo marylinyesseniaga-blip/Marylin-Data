@@ -395,6 +395,117 @@
     outline:none;
 
 }
+/* ==========================================
+   DESCRIPCIÓN DE LA OBRA · ESTILO EXPEDIENTE
+========================================== */
+
+.guide-grid article{
+    position:relative;
+}
+
+.guide-text{
+    margin-top:28px;
+}
+
+.manifest-line{
+
+    margin-top:34px;
+
+    text-align:center;
+
+    font-family:"DM Mono",monospace;
+    font-weight:700;
+    font-size:15px;
+
+    letter-spacing:.06em;
+
+    color:#6b1914;
+}
+
+.question-line{
+
+    margin:28px 0;
+
+    padding:22px;
+
+    border-left:3px solid var(--gold);
+
+    background:#e9e3d7;
+
+    font-family:"Libre Baskerville",serif;
+    font-style:italic;
+
+    font-size:26px;
+    line-height:1.35;
+
+    color:#57534b;
+}
+
+/* Sistema */
+
+.system-diagram{
+
+    display:grid;
+
+    grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+
+    gap:12px;
+
+    align-items:center;
+
+    margin:42px 0;
+}
+
+.system-box{
+
+    padding:18px 12px;
+
+    text-align:center;
+
+    border:1px dashed #8b8578;
+
+    font-family:"DM Mono",monospace;
+
+    font-size:11px;
+
+    background:#f1ece2;
+}
+
+.system-arrow{
+
+    color:var(--gold);
+
+    font-size:22px;
+}
+
+.system-note{
+
+    border-top:1px solid var(--line);
+
+    padding-top:24px;
+
+    color:#55514a;
+}
+
+@media(max-width:900px){
+
+    .system-diagram{
+
+        grid-template-columns:1fr;
+
+        justify-items:center;
+    }
+
+    .system-arrow{
+
+        transform:rotate(90deg);
+    }
+
+    .question-line{
+
+        font-size:22px;
+    }
+}
 
 #estadoSlider::-webkit-slider-thumb{
 
