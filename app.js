@@ -195,7 +195,7 @@ async function safeLoad(path, fallback) {
 async function init() {
   try {
     const meta = await safeLoad("estado_actual_web.json", EMBEDDED_META);
-    const archive = await safeLoad("archivo_estados.json", EMBEDDED_ARCHIVE);
+    const archive = await safeLoad("historial_estados.json", EMBEDDED_ARCHIVE);
 
     const state = meta.estado || "—";
     window.MARYLIN_CURRENT_STATE = state;
