@@ -1,1 +1,1 @@
-Copia index.html, style.css y app.js a la raíz del repositorio. Conserva estado_actual.png, estado_actual_web.json e historial_estados.json.
+Reemplaza index.html, style.css y app.js en la raíz del repositorio. Conserva estado_actual.png, estado_actual_web.json, historial_estados.json y la carpeta assets.
