@@ -650,6 +650,9 @@
 .execution-video{
 
     width:100%;
+    height:220px;          /* controla la altura */
+
+    object-fit:cover;      /* recorta sin deformar */
 
     display:block;
 
@@ -657,7 +660,6 @@
 
     background:#000;
 }
-
 .execution-status{
 
     border-top:1px solid #1f1f1f;
