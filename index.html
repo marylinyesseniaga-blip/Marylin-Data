@@ -115,24 +115,25 @@
     <div class="anatomy-card"><div class="ref-visual trajectory-ref"><svg viewBox="0 0 180 60" aria-hidden="true"><path d="M10 45 C40 15 60 50 88 30 S125 15 170 22"/><circle cx="10" cy="45" r="3"/><circle cx="88" cy="30" r="3"/><circle cx="170" cy="22" r="3"/></svg></div><span>TRAYECTORIA</span><strong>Desplazamiento</strong><p>El movimiento modifica la posición del eje a través de los estados.</p></div>
   </div>
 
-  <div class="execution-band" id="ejecucion">
-    <div class="execution-copy"><span class="index">04 · EJECUCIÓN</span><h3>El código no ilustra la obra.<br><em>Hace que la obra ocurra.</em></h3><p>El sistema calcula fuerzas, hereda memoria, transforma la geometría, genera una imagen y registra el estado.</p><div class="syntax-terminal"><div>&gt; calcular_fuerzas()</div><div>&gt; ejecutar_sistema()</div><div>&gt; dibujar_fragmento()</div><div>&gt; analizar_geometria_fragmento()</div><div>&gt; generar_lectura_estado()</div><div class="error">&gt; SYNTAXERROR</div><strong>No se corrige. Se registra.</strong></div></div>
-    <div class="execution-code"><pre><span># 01 · FUERZAS</span>
-fuerzas = calcular_fuerzas(d)
+  <div class="execution-panel">
 
-<span># 02 · TRANSFORMACIÓN</span>
-resultado = ejecutar_sistema(d, numero_actual)
+    <p class="execution-label">//Ejecucion_del_Sistema</p>
 
-<span># 03 · IMAGEN</span>
-ruta = dibujar_fragmento(
-    fuerzas, resultado, seed, numero
-)</pre><pre><span># 04 · LECTURA</span>
-geometria = analizar_geometria_fragmento(ruta)
-lectura = generar_lectura_estado(
-    fuerzas, resultado, geometria
-)</pre></div>
-  </div>
-</section>
+    <video autoplay muted loop playsinline class="execution-video">
+        <source src="assets/sistema_en_ejecucion.mp4" type="video/mp4">
+    </video>
+
+    <div class="execution-log">
+
+        <div>> python ejecutar_sistema.py</div>
+        <div>[OK] Variables cargadas</div>
+        <div>[OK] Fuerzas calculadas</div>
+        <div>[OK] Geometría generada</div>
+        <div>[OK] Fragmento registrado</div>
+
+    </div>
+
+</div>
 <section class="section genealogy-section" id="versiones">
 
   <div class="genealogy-head">
