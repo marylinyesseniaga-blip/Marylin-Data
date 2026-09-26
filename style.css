@@ -157,3 +157,117 @@
   .hero-key strong{font-size:16px}
   .philosophical-note{font-size:16px}
 }
+
+/* ================================
+   MARYLIN.DATA v4 · Genealogía
+   Pegar al final del style.css
+================================ */
+
+.genealogy-section{
+    padding:100px 0;
+}
+
+.genealogy-intro{
+    max-width:640px;
+    color:var(--muted);
+    margin-bottom:45px;
+}
+
+.timeline{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    position:relative;
+    margin-bottom:60px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    top:10px;
+    left:9%;
+    right:9%;
+    height:1px;
+    background:var(--gold);
+}
+
+.timeline div{
+    text-align:center;
+    position:relative;
+}
+
+.timeline div::before{
+    content:"";
+    width:10px;
+    height:10px;
+    background:var(--gold);
+    border-radius:50%;
+    display:block;
+    margin:0 auto 12px;
+}
+
+.timeline span{
+    font:10px 'DM Mono', monospace;
+}
+
+/* Galería de versiones */
+
+.version-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(220px,1fr));
+    gap:34px;
+}
+
+.version-card{
+    display:flex;
+    flex-direction:column;
+}
+
+.version-card img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:contain;
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:12px;
+    transition:.35s ease;
+}
+
+.version-card img:hover{
+    transform:translateY(-5px);
+}
+
+.version-card strong{
+    margin-top:14px;
+    font-size:15px;
+}
+
+.version-card p{
+    margin-top:6px;
+    font-size:13px;
+    color:var(--muted);
+}
+
+.version-card.final{
+    grid-column:span 2;
+}
+
+.version-card.final img{
+    aspect-ratio:5/4;
+}
+
+@media(max-width:900px){
+
+.timeline{
+grid-template-columns:repeat(3,1fr);
+gap:28px;
+}
+
+.version-grid{
+grid-template-columns:1fr;
+}
+
+.version-card.final{
+grid-column:auto;
+}
+
+}
