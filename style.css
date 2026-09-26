@@ -411,84 +411,64 @@
     color:#787068;
 
 }
-/*====================================
-ARCHIVO VIVO · SLIDER
-====================================*/
+/* ===============================
+   Slider Archivo Vivo
+================================= */
 
 .history-control{
-
-    margin-top:48px;
-    padding-top:28px;
+    margin:32px auto 0;
+    max-width:1100px;
     border-top:1px solid var(--line);
-
+    padding-top:22px;
 }
 
 .history-head{
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:18px;
-
-}
-
-.history-head span{
-
-    font-size:11px;
-    letter-spacing:.18em;
+    font-family:var(--mono);
+    font-size:.72rem;
     text-transform:uppercase;
-    color:#8b867d;
-
+    letter-spacing:.08em;
+    margin-bottom:12px;
 }
 
-.history-head strong{
-
-    font-size:22px;
-    font-weight:700;
-    color:var(--text);
-
+#historyCurrent{
+    color:var(--accent);
+    font-size:.95rem;
 }
 
 #historyRange{
-
     width:100%;
     appearance:none;
-    height:3px;
-    background:#d3cec3;
+    height:2px;
+    background:var(--line);
     outline:none;
-    cursor:pointer;
-
 }
 
 #historyRange::-webkit-slider-thumb{
-
     appearance:none;
-    width:16px;
-    height:16px;
+    width:14px;
+    height:14px;
     border-radius:50%;
-    background:#b8860b;
-    border:none;
-
+    background:var(--accent);
+    cursor:pointer;
 }
 
 #historyRange::-moz-range-thumb{
-
-    width:16px;
-    height:16px;
+    width:14px;
+    height:14px;
     border:none;
     border-radius:50%;
-    background:#b8860b;
-
+    background:var(--accent);
+    cursor:pointer;
 }
 
 .history-caption{
-
-    margin-top:14px;
     display:flex;
     justify-content:space-between;
-    font-size:11px;
-    text-transform:uppercase;
-    letter-spacing:.15em;
-    color:#8b867d;
-
+    margin-top:10px;
+    font-family:var(--mono);
+    font-size:.72rem;
+    color:var(--muted);
 }
