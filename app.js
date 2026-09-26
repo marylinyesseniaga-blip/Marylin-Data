@@ -44,59 +44,30 @@ function renderForces(meta) {
   el.innerHTML = rows.join("");
 }
 
-async function renderReading(item){
-
-  const lectura = item.lectura || {};
-
-  setText("#readingTitle", lectura.titulo || `LECTURA DEL ESTADO · ${item.estado}`);
-
-  setText("#readingSummary",
-    lectura.texto ||
-    lectura.resumen ||
-    "Sin lectura disponible.");
-
-  const q = document.querySelector("#readingQuestion");
-  if(q){
-    q.textContent =
-      lectura.pregunta ||
-      "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?";
+function renderReading(meta) {
+  const reading = meta?.lectura;
+  const set = (id, value) => { const el = $(id); if (el) el.textContent = value ?? "—"; };
+  if (!reading) {
+    set("#readingTitle", `LECTURA DEL ESTADO · ${meta?.estado || ""}`);
+    set("#readingSummary", "Lectura histórica no disponible para este estado.");
+    const obs = $("#readingObservations");
+    if (obs) obs.innerHTML = "";
+    set("#readingQuestion", "¿Qué permanece cuando un estado se convierte en memoria?");
+    return;
   }
-
+  set("#readingTitle", `${reading.titulo || "LECTURA DEL ESTADO"} · ${meta.estado || ""}`);
+  set("#readingMethod", reading.metodo || "");
+  set("#readingSummary", reading.resumen || "");
+  const geometry = reading.geometria || {};
+  set("#geoDensity", geometry.densidad !== undefined ? Number(geometry.densidad).toFixed(3) : "—");
+  set("#geoDispersion", geometry.dispersion !== undefined ? Number(geometry.dispersion).toFixed(3) : "—");
+  set("#geoAsymmetry", geometry.asimetria_vertical !== undefined ? Number(geometry.asimetria_vertical).toFixed(3) : (geometry.asimetria !== undefined ? Number(geometry.asimetria).toFixed(3) : "—"));
+  set("#geoCenter", geometry.centro_x !== undefined && geometry.centro_y !== undefined ? `${Number(geometry.centro_x).toFixed(2)} / ${Number(geometry.centro_y).toFixed(2)}` : "—");
   const obs = $("#readingObservations");
-  if(obs){
-    obs.innerHTML = "";
-    (lectura.observaciones || []).forEach(t => {
-      const div = document.createElement("div");
-      div.textContent = t;
-      obs.appendChild(div);
-    });
-  }
-
-  setText("#readingMethod", lectura.metodo || "—");
-
-  setText("#geoDensity",
-    lectura.geometria?.densidad?.toFixed?.(3) ??
-    lectura.geometria?.densidad ??
-    "—");
-
-  setText("#geoDispersion",
-    lectura.geometria?.dispersion?.toFixed?.(3) ??
-    lectura.geometria?.dispersion ??
-    "—");
-
-  setText("#geoAsymmetry",
-    lectura.geometria?.asimetria_vertical?.toFixed?.(3) ??
-    lectura.geometria?.asimetria_vertical ??
-    "—");
-
-  const cx = lectura.geometria?.centro_x;
-  const cy = lectura.geometria?.centro_y;
-
-  setText("#geoCenter",
-    (cx !== undefined && cy !== undefined)
-      ? `${Number(cx).toFixed(2)} / ${Number(cy).toFixed(2)}`
-      : "—");
+  if (obs) obs.innerHTML = (reading.observaciones || []).map((item, i) => `<div class="reading-observation"><span>${String(i+1).padStart(2,"0")}</span><p>${item}</p></div>`).join("");
+  set("#readingQuestion", reading.pregunta || "");
 }
+
 function renderTrajectory(data, currentState) {
   const items = getArchiveItems(data).slice().sort((a,b) => stateNumber(a.estado) - stateNumber(b.estado));
   const el = $("#trajectory");
@@ -297,4 +268,3 @@ function initMotion() {
 
 initMotion();
 init();
-
