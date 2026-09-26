@@ -414,50 +414,18 @@
 /* ===========================
    ARCHIVO VIVO
 =========================== */
-
 .history-control{
 
-    margin:34px auto 0;
-    width:100%;
-    padding-top:24px;
-    border-top:1px solid var(--line);
-
-}
-
-.history-title{
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:18px;
-
-}
-
-.history-title span{
-
-    font-family:var(--mono);
-    font-size:.72rem;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    color:var(--muted);
-
-}
-
-.history-title strong{
-
-    font-size:1.8rem;
-    font-weight:700;
-    color:var(--accent);
+    margin:18px 0 16px;
 
 }
 
 #historyRange{
 
     width:100%;
-    height:3px;
     appearance:none;
-    background:var(--line);
-    outline:none;
+    height:3px;
+    background:#d2c9b8;
     cursor:pointer;
 
 }
@@ -465,21 +433,10 @@
 #historyRange::-webkit-slider-thumb{
 
     appearance:none;
-    width:18px;
-    height:18px;
+    width:16px;
+    height:16px;
     border-radius:50%;
     background:var(--accent);
-    border:3px solid var(--bg);
-
-}
-
-#historyRange::-moz-range-thumb{
-
-    width:18px;
-    height:18px;
-    border-radius:50%;
-    background:var(--accent);
-    border:3px solid var(--bg);
 
 }
 
@@ -487,20 +444,15 @@
 
     display:flex;
     justify-content:space-between;
-    margin-top:10px;
+    align-items:center;
+    margin-top:8px;
     font-family:var(--mono);
-    font-size:.7rem;
-    color:var(--muted);
+    font-size:.72rem;
 
 }
 
-.history-caption{
+#historyCurrent{
 
-    display:flex;
-    justify-content:space-between;
-    margin-top:18px;
-    font-family:var(--mono);
-    font-size:.75rem;
-    color:var(--muted);
+    color:var(--accent);
 
 }
