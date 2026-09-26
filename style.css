@@ -1,1 +1,187 @@
- :root{--paper:#efe9dd;--text:#202020;--muted:#6d675f;--line:#cfc7b7;--gold:#b6852a}*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,Arial,sans-serif;background:var(--paper);color:var(--text)}.container{width:min(1200px,92vw);margin:auto}.section{padding:80px 0}nav{display:flex;gap:24px;justify-content:center;padding:24px;border-bottom:1px solid var(--line)}.hero-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center}.hero-system{background:#090909;color:#fff;padding:24px}.hero-system-head{display:flex;justify-content:space-between}.hero-image img,#currentImage{width:100%;display:block}.hero-system-data{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.2);padding-top:16px}.eyebrow{font:10px "IBM Plex Mono",monospace;color:var(--muted)}h1{font:700 56px "Libre Baskerville",serif;margin:16px 0}.hero-question{font:italic 28px "Libre Baskerville",serif;margin:20px 0}.lead{max-width:760px;color:var(--muted)}.input-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.input-grid div{border:1px solid var(--line);padding:16px;text-align:center}.timeline{display:grid;grid-template-columns:repeat(6,1fr);position:relative;margin:40px 0}.timeline:before{content:"";position:absolute;left:7%;right:4%;top:10px;height:2px;background:var(--gold)}.timeline div{text-align:center;position:relative}.timeline div:before{content:"";width:10px;height:10px;border-radius:50%;background:var(--gold);display:block;margin:0 auto 12px}.timeline span{font:10px "IBM Plex Mono",monospace}.genealogy-table{width:92%;max-width:980px;margin:auto;border-collapse:collapse}.genealogy-table th,.genealogy-table td{padding:18px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.archive{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-system-data{grid-template-columns:repeat(2,1fr)}.input-grid{grid-template-columns:1fr 1fr}.timeline{grid-template-columns:repeat(3,1fr)}}
+/* ==========================================================
+   MARYLIN.DATA — style.css v4.0
+   Edición curatorial · GitHub Pages
+   Ajustes para Genealogía + Estado Acumulado
+   (Añadir al final o reemplazar el bloque Genealogía)
+========================================================== */
+
+/* ---------- GENEALOGÍA ---------- */
+
+.genealogy-section{
+    padding:100px 0;
+}
+
+.genealogy-intro{
+    max-width:650px;
+    color:var(--muted);
+    margin-bottom:35px;
+}
+
+/* ---------- LÍNEA DEL TIEMPO ---------- */
+
+.timeline{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    position:relative;
+    margin:35px 0 55px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    top:10px;
+    left:7%;
+    right:4%;
+    height:2px;
+    background:var(--gold);
+}
+
+.timeline div{
+    text-align:center;
+    position:relative;
+}
+
+.timeline div::before{
+    content:"";
+    width:10px;
+    height:10px;
+    background:var(--gold);
+    border-radius:50%;
+    display:block;
+    margin:0 auto 12px;
+}
+
+.timeline span{
+    font:10px 'DM Mono', monospace;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+/* ---------- TABLA EDITORIAL ---------- */
+
+.genealogy-table{
+    width:92%;
+    max-width:980px;
+    margin:25px auto 0;
+    border-collapse:collapse;
+}
+
+.genealogy-table thead th{
+    text-align:left;
+    padding:18px 0 14px;
+    border-bottom:1px solid var(--line);
+
+    font:10px 'DM Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    color:var(--muted);
+}
+
+.genealogy-table tbody td{
+    vertical-align:top;
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+    line-height:1.55;
+}
+
+.genealogy-table th:first-child,
+.genealogy-table td:first-child{
+    width:22%;
+    font-weight:700;
+}
+
+.genealogy-table th:nth-child(2),
+.genealogy-table td:nth-child(2){
+    width:39%;
+}
+
+.genealogy-table th:nth-child(3),
+.genealogy-table td:nth-child(3){
+    width:39%;
+}
+
+/* Hover muy sutil */
+
+.genealogy-table tbody tr:hover{
+    background:rgba(180,133,39,.03);
+}
+
+/* ---------- ESTADO FINAL ---------- */
+
+.estado-final{
+    margin:80px auto 0;
+    max-width:900px;
+    text-align:center;
+}
+
+.estado-final img{
+    width:100%;
+    display:block;
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:18px;
+}
+
+.estado-final figcaption{
+    margin-top:18px;
+    color:var(--muted);
+    line-height:1.6;
+}
+
+.estado-final strong{
+    color:var(--text);
+    display:block;
+    margin-bottom:6px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width:900px){
+
+.timeline{
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.genealogy-table{
+    width:100%;
+}
+
+.genealogy-table thead{
+    display:none;
+}
+
+.genealogy-table,
+.genealogy-table tbody,
+.genealogy-table tr,
+.genealogy-table td{
+    display:block;
+    width:100%;
+}
+
+.genealogy-table tr{
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.genealogy-table td{
+    padding:4px 0;
+    border:none;
+}
+
+.estado-final{
+    margin-top:60px;
+}
+
+}
+
+/* ==========================================================
+   NOTA
+   Este bloque sustituye el CSS anterior de:
+   - .version-grid
+   - .version-card
+   - .table-header
+   - .table-item
+   Mantiene la estética editorial del catálogo y evita
+   la duplicación visual entre Genealogía y Archivo Vivo.
+========================================================== */
