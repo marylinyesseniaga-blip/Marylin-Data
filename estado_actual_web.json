@@ -1,33 +1,33 @@
 {
     "obra": "MARYLIN.DATA",
     "version_sistema": "3.4",
-    "estado": "MD_0024",
-    "numero_estado": 24,
-    "fecha": "2026-09-24",
-    "hora": "19:52:15",
-    "seed": 469986,
+    "estado": "MD_0022",
+    "numero_estado": 22,
+    "fecha": "2026-09-22",
+    "hora": "18:38:55",
+    "seed": 848509,
     "estado_sistema": "CONTRADICCIÓN ACTIVA",
-    "estados_registrados": 24,
+    "estados_registrados": 22,
     "fuerzas_visuales": {
         "tiempo": 14.0,
-        "peso": 86.75,
-        "expansion": 62.3333,
-        "libertad": 48.0,
-        "tension": 68.6667,
-        "movimiento": 46.5,
-        "contradiccion": 53.025,
-        "contradiccion_heredada": 53.2869,
+        "peso": 90.75,
+        "expansion": 61.6667,
+        "libertad": 46.0,
+        "tension": 70.3333,
+        "movimiento": 46.25,
+        "contradiccion": 53.95,
+        "contradiccion_heredada": 53.2525,
         "identidad": 67.3333
     },
     "memoria": {
-        "contradiccion_heredada": 53.2869,
-        "contradiccion_acumulada": 53.0682,
-        "estados_con_memoria": 23
+        "contradiccion_heredada": 53.2525,
+        "contradiccion_acumulada": 53.0204,
+        "estados_con_memoria": 21
     },
     "huella": {
-        "cambio_absoluto_acumulado": 1294.0,
-        "movimientos_registrados": 238,
-        "intensidad_huella": 0.05437,
+        "cambio_absoluto_acumulado": 1218.0,
+        "movimientos_registrados": 223,
+        "intensidad_huella": 0.054619,
         "pico_huella": 0.2,
         "persistencia": 1.0
     },
@@ -36,5 +36,28 @@
         "identidad_acumulada": "identidad_acumulada_actual.png",
         "mapa_temporal": "mapa_temporal_actual.png"
     },
-    "principio": "La identidad no se promedia: se acumula. Cada experiencia agrega un movimiento y los estados anteriores pueden deformar los posteriores."
+    "principio": "La identidad no se promedia: se acumula. Cada experiencia agrega un movimiento y los estados anteriores pueden deformar los posteriores.",
+    "lectura": {
+        "titulo": "LECTURA DEL ESTADO",
+        "resumen": "El estado combina baja densidad, asimetría contenida y una dispersión amplia del campo visual.",
+        "observaciones": [
+            "La estructura conserva baja compresión y mayor disponibilidad espacial.",
+            "La expansión permanece contenida y concentra el campo visual.",
+            "Las trayectorias conservan una organización relativamente estable.",
+            "El eje conserva una deriva limitada.",
+            "La oposición entre fuerzas no domina el estado.",
+            "La memoria reciente tiene una presencia visual reducida.",
+            "Los elementos ocupan un campo amplio y se dispersan fuera del núcleo."
+        ],
+        "pregunta": "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?",
+        "geometria": {
+            "densidad": 0.0548,
+            "centro_x": 0.5034,
+            "centro_y": 0.5357,
+            "asimetia": 0.0012,
+            "asimetia_vertical": 0.2435,
+            "dispersion": 0.9386
+        },
+        "metodo": "Lectura formal derivada de las fuerzas del sistema y de medidas básicas de la imagen; no es una interpretación psicológica."
+    }
 }

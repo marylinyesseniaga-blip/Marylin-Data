@@ -1,0 +1,23 @@
+{
+    "titulo": "LECTURA DEL ESTADO",
+    "resumen": "El estado combina baja densidad, asimetría contenida y una dispersión amplia del campo visual.",
+    "observaciones": [
+        "La estructura conserva baja compresión y mayor disponibilidad espacial.",
+        "La expansión permanece contenida y concentra el campo visual.",
+        "Las trayectorias conservan una organización relativamente estable.",
+        "El eje conserva una deriva limitada.",
+        "La oposición entre fuerzas no domina el estado.",
+        "La memoria reciente tiene una presencia visual reducida.",
+        "Los elementos ocupan un campo amplio y se dispersan fuera del núcleo."
+    ],
+    "pregunta": "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?",
+    "geometria": {
+        "densidad": 0.0548,
+        "centro_x": 0.5034,
+        "centro_y": 0.5357,
+        "asimetia": 0.0012,
+        "asimetia_vertical": 0.2435,
+        "dispersion": 0.9386
+    },
+    "metodo": "Lectura formal derivada de las fuerzas del sistema y de medidas básicas de la imagen; no es una interpretación psicológica."
+}

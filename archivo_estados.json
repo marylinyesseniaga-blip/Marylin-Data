@@ -1,10 +1,9 @@
 {
     "obra": "MARYLIN.DATA",
-    "actualizado": "2026-09-24 07:55:38",
+    "actualizado": "2026-09-22 18:38:55",
     "estados": [
         {
             "estado": "MD_0001",
-            "numero_estado": 1,
             "fecha": "2026-09-01",
             "hora": "22:35:15",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -12,7 +11,6 @@
         },
         {
             "estado": "MD_0002",
-            "numero_estado": 2,
             "fecha": "2026-09-02",
             "hora": "16:55:11",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -20,7 +18,6 @@
         },
         {
             "estado": "MD_0003",
-            "numero_estado": 3,
             "fecha": "2026-09-03",
             "hora": "19:57:58",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -28,7 +25,6 @@
         },
         {
             "estado": "MD_0004",
-            "numero_estado": 4,
             "fecha": "2026-09-04",
             "hora": "21:01:29",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -36,7 +32,6 @@
         },
         {
             "estado": "MD_0005",
-            "numero_estado": 5,
             "fecha": "2026-09-05",
             "hora": "19:57:50",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -44,7 +39,6 @@
         },
         {
             "estado": "MD_0006",
-            "numero_estado": 6,
             "fecha": "2026-09-07",
             "hora": "07:37:28",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -52,7 +46,6 @@
         },
         {
             "estado": "MD_0007",
-            "numero_estado": 7,
             "fecha": "2026-09-07",
             "hora": "17:06:09",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -60,7 +53,6 @@
         },
         {
             "estado": "MD_0008",
-            "numero_estado": 8,
             "fecha": "2026-09-08",
             "hora": "13:37:50",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -68,15 +60,13 @@
         },
         {
             "estado": "MD_0009",
-            "numero_estado": 9,
             "fecha": "2026-09-09",
-            "hora": "21:00:20",
+            "hora": "21:00:19",
             "resultado": "CONTRADICCIÓN ACTIVA",
             "fragmento": "MD_0009.png"
         },
         {
             "estado": "MD_0010",
-            "numero_estado": 10,
             "fecha": "2026-09-10",
             "hora": "19:22:26",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -84,7 +74,6 @@
         },
         {
             "estado": "MD_0011",
-            "numero_estado": 11,
             "fecha": "2026-09-11",
             "hora": "21:39:37",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -92,7 +81,6 @@
         },
         {
             "estado": "MD_0012",
-            "numero_estado": 12,
             "fecha": "2026-09-12",
             "hora": "22:11:41",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -100,7 +88,6 @@
         },
         {
             "estado": "MD_0013",
-            "numero_estado": 13,
             "fecha": "2026-09-13",
             "hora": "21:11:11",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -108,7 +95,6 @@
         },
         {
             "estado": "MD_0014",
-            "numero_estado": 14,
             "fecha": "2026-09-14",
             "hora": "21:43:21",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -116,7 +102,6 @@
         },
         {
             "estado": "MD_0015",
-            "numero_estado": 15,
             "fecha": "2026-09-15",
             "hora": "20:58:12",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -124,7 +109,6 @@
         },
         {
             "estado": "MD_0016",
-            "numero_estado": 16,
             "fecha": "2026-09-16",
             "hora": "19:20:19",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -132,7 +116,6 @@
         },
         {
             "estado": "MD_0017",
-            "numero_estado": 17,
             "fecha": "2026-09-17",
             "hora": "20:57:54",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -140,7 +123,6 @@
         },
         {
             "estado": "MD_0018",
-            "numero_estado": 18,
             "fecha": "2026-09-19",
             "hora": "17:23:44",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -148,7 +130,6 @@
         },
         {
             "estado": "MD_0019",
-            "numero_estado": 19,
             "fecha": "2026-09-20",
             "hora": "09:51:00",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -156,7 +137,6 @@
         },
         {
             "estado": "MD_0020",
-            "numero_estado": 20,
             "fecha": "2026-09-20",
             "hora": "19:38:59",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -164,7 +144,6 @@
         },
         {
             "estado": "MD_0021",
-            "numero_estado": 21,
             "fecha": "2026-09-21",
             "hora": "18:45:09",
             "resultado": "CONTRADICCIÓN ACTIVA",
@@ -172,19 +151,10 @@
         },
         {
             "estado": "MD_0022",
-            "numero_estado": 22,
             "fecha": "2026-09-22",
             "hora": "18:38:28",
             "resultado": "CONTRADICCIÓN ACTIVA",
             "fragmento": "MD_0022.png"
-        },
-        {
-            "estado": "MD_0023",
-            "numero_estado": 23,
-            "fecha": "2026-09-24",
-            "hora": "07:55:38",
-            "resultado": "CONTRADICCIÓN ACTIVA",
-            "fragmento": "MD_0023.png"
         }
     ]
 }
