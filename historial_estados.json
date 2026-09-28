@@ -1,6 +1,6 @@
 {
     "obra": "MARYLIN.DATA",
-    "actualizado": "2026-09-26",
+    "actualizado": "2026-09-28",
     "estados": [
         {
             "obra": "MARYLIN.DATA",
@@ -1408,7 +1408,7 @@
             "estado": "MD_0026",
             "numero_estado": 26,
             "fecha": "2026-09-26",
-            "hora": "18:11:31",
+            "hora": "18:10:58",
             "seed": 136262,
             "estado_sistema": "CONTRADICCIÓN ACTIVA",
             "estados_registrados": 26,
@@ -1455,6 +1455,62 @@
                     "asimetria_vertical": 100.0,
                     "centro_x": 7.126,
                     "centro_y": 4.192
+                }
+            }
+        },
+        {
+            "obra": "MARYLIN.DATA",
+            "version_sistema": "3.4",
+            "estado": "MD_0027",
+            "numero_estado": 27,
+            "fecha": "2026-09-28",
+            "hora": "07:41:56",
+            "seed": 682934,
+            "estado_sistema": "CONTRADICCIÓN ACTIVA",
+            "estados_registrados": 27,
+            "fuerzas_visuales": {
+                "tiempo": 14.0,
+                "peso": 87.0,
+                "expansion": 67.0,
+                "libertad": 51.6667,
+                "tension": 68.6667,
+                "movimiento": 56.0,
+                "contradiccion": 51.875,
+                "contradiccion_heredada": 53.0193,
+                "identidad": 72.3333
+            },
+            "memoria": {
+                "contradiccion_heredada": 53.0193,
+                "contradiccion_acumulada": 52.8863,
+                "estados_con_memoria": 26
+            },
+            "huella": {
+                "cambio_absoluto_acumulado": 1403.0,
+                "movimientos_registrados": 259,
+                "intensidad_huella": 0.05417,
+                "pico_huella": 0.2,
+                "persistencia": 1.0
+            },
+            "fragmento": "MD_0027.png",
+            "lectura": {
+                "titulo": "LECTURA DEL ESTADO",
+                "resumen": "El estado presenta una compresión alta, una asimetría marcada, una apertura contenida y una deriva moderada del eje visual.",
+                "observaciones": [
+                    "El peso opera con una intensidad de 87.00 y condiciona la estructura.",
+                    "La tensión alcanza 68.67; la asimetría se conserva marcada.",
+                    "La expansión y la libertad producen una apertura contenida del campo.",
+                    "El movimiento registra una deriva moderada del eje.",
+                    "La contradicción alcanza 51.88 y permanece activa dentro del estado.",
+                    "La identidad se sitúa en 72.33 dentro de la escala visual del sistema."
+                ],
+                "pregunta": "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?",
+                "metodo": "Lectura formal derivada de las fuerzas y de la geometría documentada del estado; no es una interpretación psicológica.",
+                "geometria": {
+                    "densidad": 70.764,
+                    "dispersion": 100.0,
+                    "asimetria_vertical": 100.0,
+                    "centro_x": 7.215,
+                    "centro_y": 4.202
                 }
             },
             "imagenes": {
