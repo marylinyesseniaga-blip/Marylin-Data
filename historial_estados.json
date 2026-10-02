@@ -1,6 +1,6 @@
 {
     "obra": "MARYLIN.DATA",
-    "actualizado": "2026-10-01 10:49:06",
+    "actualizado": "2026-10-01",
     "estados": [
         {
             "obra": "MARYLIN.DATA",
@@ -1213,6 +1213,18 @@
             },
             "fragmento": "MD_0022.png",
             "lectura": {
+                "titulo": "LECTURA DEL ESTADO",
+                "resumen": "El estado presenta una compresión alta, una asimetría marcada, una apertura contenida y una deriva moderada del eje visual.",
+                "observaciones": [
+                    "El peso opera con una intensidad de 90.75 y condiciona la estructura.",
+                    "La tensión alcanza 70.33; la asimetría se conserva marcada.",
+                    "La expansión y la libertad producen una apertura contenida del campo.",
+                    "El movimiento registra una deriva moderada del eje.",
+                    "La contradicción alcanza 53.95 y permanece activa dentro del estado.",
+                    "La identidad se sitúa en 67.33 dentro de la escala visual del sistema."
+                ],
+                "pregunta": "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?",
+                "metodo": "Lectura formal derivada de las fuerzas y de la geometría documentada del estado; no es una interpretación psicológica.",
                 "geometria": {
                     "densidad": 70.167,
                     "dispersion": 100.0,
@@ -1313,6 +1325,18 @@
             },
             "fragmento": "MD_0024.png",
             "lectura": {
+                "titulo": "LECTURA DEL ESTADO",
+                "resumen": "El estado presenta una compresión alta, una asimetría marcada, una apertura contenida y una deriva moderada del eje visual.",
+                "observaciones": [
+                    "El peso opera con una intensidad de 86.75 y condiciona la estructura.",
+                    "La tensión alcanza 68.67; la asimetría se conserva marcada.",
+                    "La expansión y la libertad producen una apertura contenida del campo.",
+                    "El movimiento registra una deriva moderada del eje.",
+                    "La contradicción alcanza 53.02 y permanece activa dentro del estado.",
+                    "La identidad se sitúa en 67.33 dentro de la escala visual del sistema."
+                ],
+                "pregunta": "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?",
+                "metodo": "Lectura formal derivada de las fuerzas y de la geometría documentada del estado; no es una interpretación psicológica.",
                 "geometria": {
                     "densidad": 69.556,
                     "dispersion": 100.0,
@@ -1645,6 +1669,68 @@
                     "La expansión y la libertad producen una apertura contenida del campo.",
                     "El movimiento registra una deriva moderada del eje.",
                     "La contradicción alcanza 51.71 y permanece activa dentro del estado.",
+                    "La identidad se sitúa en 72.33 dentro de la escala visual del sistema."
+                ],
+                "pregunta": "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?",
+                "metodo": "Lectura formal derivada de las fuerzas y de la geometría documentada del estado; no es una interpretación psicológica.",
+                "geometria": {
+                    "densidad": 70.256,
+                    "dispersion": 100.0,
+                    "asimetria_vertical": 100.0,
+                    "centro_x": 7.483,
+                    "centro_y": 4.23
+                }
+            },
+            "imagenes": {
+                "estado_actual": "estado_actual.png",
+                "identidad_acumulada": "identidad_acumulada_actual.png",
+                "mapa_temporal": "mapa_temporal_actual.png"
+            },
+            "principio": "La identidad no se promedia: se acumula. Cada experiencia agrega un movimiento y los estados anteriores pueden deformar los posteriores."
+        },
+        {
+            "obra": "MARYLIN.DATA",
+            "version_sistema": "3.4",
+            "estado": "MD_0031",
+            "numero_estado": 31,
+            "fecha": "2026-10-02",
+            "hora": "13:31:45",
+            "seed": 914498,
+            "estado_sistema": "CONTRADICCIÓN ACTIVA",
+            "estados_registrados": 31,
+            "fuerzas_visuales": {
+                "tiempo": 14.0,
+                "peso": 87.0,
+                "expansion": 62.6667,
+                "libertad": 50.0000,
+                "tension": 66.0000,
+                "movimiento": 48.7500,
+                "contradiccion": 50.6875,
+                "contradiccion_heredada": 52.6159,
+                "identidad": 72.3333
+            },
+            "memoria": {
+                "contradiccion_heredada": 62.6159,
+                "contradiccion_acumulada": 52.5929,
+                "estados_con_memoria": 30
+            },
+            "huella": {
+                "cambio_absoluto_acumulado": 1457.0,
+                "movimientos_registrados": 274,
+                "intensidad_huella": 0.053175,
+                "pico_huella": 0.2,
+                "persistencia": 1.0
+            },
+            "fragmento": "MD_0031.png",
+            "lectura": {
+                "titulo": "LECTURA DEL ESTADO",
+                "resumen": "El estado presenta una compresión alta, una asimetría marcada, una apertura contenida y una deriva moderada del eje visual.",
+                "observaciones": [
+                    "El peso opera con una intensidad de 87.00 y condiciona la estructura.",
+                    "La tensión alcanza 66.00; la asimetría se conserva marcada.",
+                    "La expansión y la libertad producen una apertura contenida del campo.",
+                    "El movimiento registra una deriva moderada del eje.",
+                    "La contradicción alcanza 50.68 y permanece activa dentro del estado.",
                     "La identidad se sitúa en 72.33 dentro de la escala visual del sistema."
                 ],
                 "pregunta": "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?",
