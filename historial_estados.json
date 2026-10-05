@@ -1,10 +1,10 @@
 {
     "obra": "MARYLIN.DATA",
-    "actualizado": "2026-10-01",
+    "actualizado": "2026-10-05",
     "estados": [
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0001",
             "numero_estado": 1,
             "fecha": "2026-09-01",
@@ -60,7 +60,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0002",
             "numero_estado": 2,
             "fecha": "2026-09-02",
@@ -116,7 +116,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0003",
             "numero_estado": 3,
             "fecha": "2026-09-03",
@@ -172,7 +172,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0004",
             "numero_estado": 4,
             "fecha": "2026-09-04",
@@ -228,7 +228,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0005",
             "numero_estado": 5,
             "fecha": "2026-09-05",
@@ -284,7 +284,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0006",
             "numero_estado": 6,
             "fecha": "2026-09-07",
@@ -340,7 +340,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0007",
             "numero_estado": 7,
             "fecha": "2026-09-07",
@@ -396,7 +396,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0008",
             "numero_estado": 8,
             "fecha": "2026-09-08",
@@ -452,7 +452,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0009",
             "numero_estado": 9,
             "fecha": "2026-09-09",
@@ -508,7 +508,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0010",
             "numero_estado": 10,
             "fecha": "2026-09-10",
@@ -564,7 +564,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0011",
             "numero_estado": 11,
             "fecha": "2026-09-11",
@@ -620,7 +620,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0012",
             "numero_estado": 12,
             "fecha": "2026-09-12",
@@ -676,7 +676,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0013",
             "numero_estado": 13,
             "fecha": "2026-09-13",
@@ -732,7 +732,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0014",
             "numero_estado": 14,
             "fecha": "2026-09-14",
@@ -788,7 +788,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0015",
             "numero_estado": 15,
             "fecha": "2026-09-15",
@@ -844,7 +844,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0016",
             "numero_estado": 16,
             "fecha": "2026-09-16",
@@ -900,7 +900,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0017",
             "numero_estado": 17,
             "fecha": "2026-09-17",
@@ -956,7 +956,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0018",
             "numero_estado": 18,
             "fecha": "2026-09-19",
@@ -1012,7 +1012,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0019",
             "numero_estado": 19,
             "fecha": "2026-09-20",
@@ -1068,7 +1068,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0020",
             "numero_estado": 20,
             "fecha": "2026-09-20",
@@ -1124,7 +1124,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0021",
             "numero_estado": 21,
             "fecha": "2026-09-21",
@@ -1180,7 +1180,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0022",
             "numero_estado": 22,
             "fecha": "2026-09-22",
@@ -1236,7 +1236,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0023",
             "numero_estado": 23,
             "fecha": "2026-09-24",
@@ -1292,7 +1292,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0024",
             "numero_estado": 24,
             "fecha": "2026-09-24",
@@ -1348,7 +1348,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0025",
             "numero_estado": 25,
             "fecha": "2026-09-26",
@@ -1404,7 +1404,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0026",
             "numero_estado": 26,
             "fecha": "2026-09-26",
@@ -1460,7 +1460,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0027",
             "numero_estado": 27,
             "fecha": "2026-09-28",
@@ -1516,7 +1516,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0028",
             "numero_estado": 28,
             "fecha": "2026-09-29",
@@ -1572,7 +1572,7 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0029",
             "numero_estado": 29,
             "fecha": "2026-09-30",
@@ -1628,11 +1628,11 @@
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0030",
             "numero_estado": 30,
             "fecha": "2026-10-01",
-            "hora": "10:49:06",
+            "hora": "10:47:44",
             "seed": 825381,
             "estado_sistema": "CONTRADICCIÓN ACTIVA",
             "estados_registrados": 30,
@@ -1680,17 +1680,11 @@
                     "centro_x": 7.483,
                     "centro_y": 4.23
                 }
-            },
-            "imagenes": {
-                "estado_actual": "estado_actual.png",
-                "identidad_acumulada": "identidad_acumulada_actual.png",
-                "mapa_temporal": "mapa_temporal_actual.png"
-            },
-            "principio": "La identidad no se promedia: se acumula. Cada experiencia agrega un movimiento y los estados anteriores pueden deformar los posteriores."
+            }
         },
         {
             "obra": "MARYLIN.DATA",
-            "version_sistema": "3.4",
+            "version_sistema": "3.3",
             "estado": "MD_0031",
             "numero_estado": 31,
             "fecha": "2026-10-02",
@@ -1702,22 +1696,22 @@
                 "tiempo": 14.0,
                 "peso": 87.0,
                 "expansion": 62.6667,
-                "libertad": 50.0000,
-                "tension": 66.0000,
-                "movimiento": 48.7500,
+                "libertad": 50.0,
+                "tension": 66.0,
+                "movimiento": 48.75,
                 "contradiccion": 50.6875,
                 "contradiccion_heredada": 52.6159,
                 "identidad": 72.3333
             },
             "memoria": {
-                "contradiccion_heredada": 62.6159,
+                "contradiccion_heredada": 52.6159,
                 "contradiccion_acumulada": 52.5929,
                 "estados_con_memoria": 30
             },
             "huella": {
-                "cambio_absoluto_acumulado": 1457.0,
-                "movimientos_registrados": 274,
-                "intensidad_huella": 0.053175,
+                "cambio_absoluto_acumulado": 1483.0,
+                "movimientos_registrados": 281,
+                "intensidad_huella": 0.052776,
                 "pico_huella": 0.2,
                 "persistencia": 1.0
             },
@@ -1730,17 +1724,129 @@
                     "La tensión alcanza 66.00; la asimetría se conserva marcada.",
                     "La expansión y la libertad producen una apertura contenida del campo.",
                     "El movimiento registra una deriva moderada del eje.",
-                    "La contradicción alcanza 50.68 y permanece activa dentro del estado.",
+                    "La contradicción alcanza 50.69 y permanece activa dentro del estado.",
                     "La identidad se sitúa en 72.33 dentro de la escala visual del sistema."
                 ],
                 "pregunta": "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?",
                 "metodo": "Lectura formal derivada de las fuerzas y de la geometría documentada del estado; no es una interpretación psicológica.",
                 "geometria": {
-                    "densidad": 70.256,
+                    "densidad": 68.61,
                     "dispersion": 100.0,
                     "asimetria_vertical": 100.0,
-                    "centro_x": 7.483,
-                    "centro_y": 4.23
+                    "centro_x": 7.573,
+                    "centro_y": 4.239
+                }
+            }
+        },
+        {
+            "obra": "MARYLIN.DATA",
+            "version_sistema": "3.3",
+            "estado": "MD_0032",
+            "numero_estado": 32,
+            "fecha": "2026-10-05",
+            "hora": "08:02:20",
+            "seed": 752337,
+            "estado_sistema": "CONTRADICCIÓN ACTIVA",
+            "estados_registrados": 32,
+            "fuerzas_visuales": {
+                "tiempo": 14.0,
+                "peso": 82.0,
+                "expansion": 61.0,
+                "libertad": 51.3333,
+                "tension": 66.0,
+                "movimiento": 46.25,
+                "contradiccion": 50.6875,
+                "contradiccion_heredada": 52.4644,
+                "identidad": 72.3333
+            },
+            "memoria": {
+                "contradiccion_heredada": 52.4644,
+                "contradiccion_acumulada": 52.48,
+                "estados_con_memoria": 31
+            },
+            "huella": {
+                "cambio_absoluto_acumulado": 1514.0,
+                "movimientos_registrados": 286,
+                "intensidad_huella": 0.052937,
+                "pico_huella": 0.2,
+                "persistencia": 1.0
+            },
+            "fragmento": "MD_0032.png",
+            "lectura": {
+                "titulo": "LECTURA DEL ESTADO",
+                "resumen": "El estado presenta una compresión alta, una asimetría marcada, una apertura contenida y una deriva moderada del eje visual.",
+                "observaciones": [
+                    "El peso opera con una intensidad de 82.00 y condiciona la estructura.",
+                    "La tensión alcanza 66.00; la asimetría se conserva marcada.",
+                    "La expansión y la libertad producen una apertura contenida del campo.",
+                    "El movimiento registra una deriva moderada del eje.",
+                    "La contradicción alcanza 50.69 y permanece activa dentro del estado.",
+                    "La identidad se sitúa en 72.33 dentro de la escala visual del sistema."
+                ],
+                "pregunta": "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?",
+                "metodo": "Lectura formal derivada de las fuerzas y de la geometría documentada del estado; no es una interpretación psicológica.",
+                "geometria": {
+                    "densidad": 68.198,
+                    "dispersion": 100.0,
+                    "asimetria_vertical": 100.0,
+                    "centro_x": 7.663,
+                    "centro_y": 4.248
+                }
+            }
+        },
+        {
+            "obra": "MARYLIN.DATA",
+            "version_sistema": "3.3",
+            "estado": "MD_0033",
+            "numero_estado": 33,
+            "fecha": "2026-10-05",
+            "hora": "08:10:32",
+            "seed": 409138,
+            "estado_sistema": "CONTRADICCIÓN ACTIVA",
+            "estados_registrados": 33,
+            "fuerzas_visuales": {
+                "tiempo": 14.0,
+                "peso": 78.5,
+                "expansion": 61.0,
+                "libertad": 51.3333,
+                "tension": 62.6667,
+                "movimiento": 46.25,
+                "contradiccion": 49.8125,
+                "contradiccion_heredada": 52.3252,
+                "identidad": 72.3333
+            },
+            "memoria": {
+                "contradiccion_heredada": 52.3252,
+                "contradiccion_acumulada": 52.3754,
+                "estados_con_memoria": 32
+            },
+            "huella": {
+                "cambio_absoluto_acumulado": 1568.0,
+                "movimientos_registrados": 292,
+                "intensidad_huella": 0.053699,
+                "pico_huella": 0.2,
+                "persistencia": 1.0
+            },
+            "fragmento": "MD_0033.png",
+            "lectura": {
+                "titulo": "LECTURA DEL ESTADO",
+                "resumen": "El estado presenta una compresión alta, una asimetría contenida, una apertura contenida y una deriva moderada del eje visual.",
+                "observaciones": [
+                    "El peso opera con una intensidad de 78.50 y condiciona la estructura.",
+                    "La tensión alcanza 62.67; la asimetría se conserva contenida.",
+                    "La expansión y la libertad producen una apertura contenida del campo.",
+                    "El movimiento registra una deriva moderada del eje.",
+                    "La contradicción alcanza 49.81 y permanece activa dentro del estado.",
+                    "La identidad se sitúa en 72.33 dentro de la escala visual del sistema."
+                ],
+                "pregunta": "¿Qué parte de este estado pertenece a la experiencia actual y qué parte proviene de estados anteriores?",
+                "metodo": "Lectura formal derivada de las fuerzas y de la geometría documentada del estado; no es una interpretación psicológica.",
+                "geometria": {
+                    "densidad": 67.139,
+                    "dispersion": 100.0,
+                    "asimetria_vertical": 100.0,
+                    "centro_x": 7.752,
+                    "centro_y": 4.256
                 }
             },
             "imagenes": {
